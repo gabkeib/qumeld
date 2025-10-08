@@ -1,0 +1,22 @@
+[project]
+name = "magistro-darbas"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "docker>=7.1.0",
+    "networkx>=3.5",
+    "pylatexenc>=2.10",
+    "pytket>=2.9.3",
+    "qiskit>=2.2.1",
+    "qiskit-aer>=0.17.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.11",
+]
+
+[tool.ruff]
+extend-exclude = ["external_quantum_compilers"]

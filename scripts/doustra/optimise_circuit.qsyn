@@ -1,0 +1,8 @@
+//!ARGS INPUT LAYOUT OUTPUT
+qcir read ${INPUT}
+qc2zx; zx optimize --full; zx2qc
+qcir optimize
+qcir print --stat
+device read ${LAYOUT}
+duostra -c
+qcir write ${OUTPUT}
