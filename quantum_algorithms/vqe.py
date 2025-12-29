@@ -1,7 +1,7 @@
 import ast
 from typing import List
 from qiskit import generate_preset_pass_manager
-from qiskit.circuit.library import EfficientSU2
+from qiskit.circuit.library import efficient_su2
 from qiskit.quantum_info import SparsePauliOp
 import numpy as np
 from qiskit_aer import AerSimulator
@@ -11,14 +11,18 @@ from scipy.optimize import minimize
 from qiskit.primitives import BackendEstimatorV2
 
 
-def get_ansatz(num_qubits, entanglement):
-    return EfficientSU2(num_qubits=num_qubits, entanglement=entanglement)
+def get_ansatz(num_qubits, entanglement, decompose=False):
+    circ = efficient_su2(num_qubits=num_qubits, entanglement=entanglement)
+    if decompose:
+        circ = circ.decompose()
+    return circ
 
 def cost_func(params, ansatz, H, estimator):
     pub = (ansatz, [H], [params])
     result = estimator.run(pubs=[pub]).result()
     energy = result[0].data.evs[0]
     return energy
+
 
 # example vqe algorithm. TODO: make it variable
 def run_vqe(hamiltonian, num_qubits, backend):

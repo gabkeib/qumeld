@@ -11,7 +11,12 @@ wheels/
 
 # Virtual environments
 .venv
+.venv-*/
+.ruff_cache/
+
+**/.DS_Store
 
 dumps/
 
 results/
+optimisation_results/

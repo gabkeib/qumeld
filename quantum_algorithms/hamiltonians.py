@@ -107,6 +107,18 @@ def get_H2_hamiltonian() -> list[str]:
             "XXXX",
         ]
 
+def get_qaoa_max_cut_hamiltonian(graph: list[list[int]]) -> list[str]:
+    pauli_strings = []
+    for i in range(len(graph)):
+        for j in range(i + 1, len(graph)):
+            if graph[i][j] == 1:
+                pauli_list = ['I'] * len(graph)
+                pauli_list[i] = 'Z'
+                pauli_list[j] = 'Z'
+                pauli_string = ''.join(pauli_list)
+                pauli_strings.append(pauli_string)
+    return pauli_strings
+
 hamiltonian_functions = {
     "H2": get_H2_hamiltonian,
     "LiH": get_LiH_hamiltonian,

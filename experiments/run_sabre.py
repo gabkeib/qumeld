@@ -1,12 +1,14 @@
 from calendar import c
+from math import exp
 from typing import List
 from xml.etree.ElementInclude import include
 import qiskit
 from experiments.run_qiskit import convert_pauli_strings
+from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 from topologies.topologies import get_topology_by_string
 from routing_algorithms.utils import convert_array_to_coupling_map
 from qiskit.transpiler.passes import SabreLayout, SabreSwap
-from qiskit import QuantumCircuit, visualization
+from qiskit import QuantumCircuit, visualization, transpile
 from qiskit.quantum_info import SparsePauliOp
 from experiments.types import CircuitOptimisationResult
 from qiskit.transpiler import PassManager
@@ -14,7 +16,7 @@ from qiskit.circuit.library import PauliEvolutionGate
 from time import time
 
 # Run SABRE algorithm with selected algorithm and quantum computer
-def run_sabre_hamiltonian(quantum_computer: List[List[int]], num_qubits: int,  pauli_strings: List[str], quantum_algorithm: str) -> CircuitOptimisationResult:
+def run_sabre_hamiltonian(quantum_computer: List[List[int]], num_qubits: int, pauli_strings: List[str], quantum_algorithm: str) -> CircuitOptimisationResult:
     start_time = time()
     coupling_map = convert_array_to_coupling_map(quantum_computer)
 
@@ -28,12 +30,19 @@ def run_sabre_hamiltonian(quantum_computer: List[List[int]], num_qubits: int,  p
     circuit = QuantumCircuit(hamiltonian.num_qubits)
     circuit.append(evo_gate, circuit.qubits)
 
-    qc_swapped = sabre_optimise_circuit(circuit, coupling_map)
+    # circuit = circuit.decompose()  # You may need multiple decompose() calls
+    circuit = transpile(circuit, basis_gates=['cx', 'rz', 'sx', 'x', 'swap'], optimization_level=0)
 
+    qc_swapped = sabre_optimise_circuit(circuit, coupling_map)
+    calculatedStatistics = calculate_estimated_average_value_and_dispersion(circuit, qc_swapped, hamiltonian)
     return CircuitOptimisationResult(
         name=quantum_algorithm,
         swap_count=qc_swapped.count_ops().get('swap', 0),
+        cx_count=qc_swapped.count_ops().get('cx', 0) + qc_swapped.count_ops().get('swap', 0) * 3,
         depth=qc_swapped.depth(),
+        expected_value=calculatedStatistics.expected_value_after,
+        variance=calculatedStatistics.variance_after,
+        fidelity=calculatedStatistics.fidelity,
         optimisation_time=time() - start_time
     )
 
@@ -42,11 +51,16 @@ def run_sabre_circuit(circuit: QuantumCircuit, quantum_computer: List[List[int]]
     coupling_map = convert_array_to_coupling_map(quantum_computer)
 
     qc_swapped = sabre_optimise_circuit(circuit, coupling_map)
+    calculatedStatistics = calculate_estimated_average_value_and_dispersion(circuit, qc_swapped, None)
 
     return CircuitOptimisationResult(
         name=quantum_algorithm,
         swap_count=qc_swapped.count_ops().get('swap', 0),
+        cx_count=qc_swapped.count_ops().get('cx', 0) + qc_swapped.count_ops().get('swap', 0) * 3,
         depth=qc_swapped.depth(),
+        expected_value=calculatedStatistics.expected_value_after,
+        variance=calculatedStatistics.variance_after,
+        fidelity=calculatedStatistics.fidelity,
         optimisation_time=time() - start_time
     )
 

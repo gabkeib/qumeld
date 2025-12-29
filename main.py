@@ -16,8 +16,8 @@ if __name__ == "__main__":
 
     circuit_optimisation_algorithms = [
         # "sabre",
-        # "qiskit",
-        # "pauliforest",
+        "qiskit",
+        "pauliforest",
         "doustra"
     ]
 
@@ -31,4 +31,4 @@ if __name__ == "__main__":
         for algorithm in algorithms_to_run:
             for circuit_optimisation_algorithm in circuit_optimisation_algorithms:
                 print(f"Running {quantum_computer} with {algorithm} using {circuit_optimisation_algorithm}")
-                run_experiments.run_experiments_paulistrings(quantum_computer, algorithm, circuit_optimisation_algorithm, path_to_save=f"./results/{timestamp}/{quantum_computer}/{algorithm}")
+                run_experiments.run_experiments(quantum_computer, algorithm, circuit_optimisation_algorithm, path_to_save=f"./results/{timestamp}/{quantum_computer}/{algorithm}")

@@ -1,10 +1,15 @@
 from calendar import c
 from pathlib import Path
+import statistics
 from time import time
 import subprocess
 import os
 
-from typing import List
+import re
+from sympy import im
+import numpy as np
+
+from typing import List, Tuple
 
 from qiskit import QuantumCircuit, qasm2
 
@@ -13,6 +18,7 @@ from qiskit.circuit.library import PauliEvolutionGate
 from qiskit.quantum_info import SparsePauliOp
 
 from experiments.types import CircuitOptimisationResult
+from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
 def convert_to_layout(name, quantum_computer: List[List[int]], num_qubits: int) -> List[int]:
     coupling_map = [[] for _ in range(num_qubits)]
@@ -42,26 +48,36 @@ def run_doustra_hamiltonian(quantum_computer: List[List[int]], quantum_computer_
     circuit = QuantumCircuit(hamiltonian.num_qubits)
     circuit.append(evo_gate, circuit.qubits)
 
-    optimised_qc = doustra_optimise_circuit(circuit, quantum_computer, quantum_computer_name, quantum_algorithm)
-
+    optimised_qc, swap_value = doustra_optimise_circuit(circuit, quantum_computer, quantum_computer_name, quantum_algorithm)
+    calculated_statistics = calculate_estimated_average_value_and_dispersion(circuit, optimised_qc, hamiltonian)
     return CircuitOptimisationResult(
         name=quantum_algorithm,
-        swap_count=optimised_qc.count_ops().get('swap', 0),
+        swap_count=swap_value,
+        cx_count=optimised_qc.count_ops().get('cx', 0),
         depth=optimised_qc.depth(),
+        expected_value=calculated_statistics.expected_value_after,
+        variance=calculated_statistics.variance_after,
+        fidelity=calculated_statistics.fidelity,
         optimisation_time=time() - time_start
     )
 
 def run_doustra_circuit(circuit: QuantumCircuit, quantum_computer: List[List[int]], quantum_computer_name: str, quantum_algorithm: str) -> CircuitOptimisationResult:
     time_start = time()
-    optimised_qc = doustra_optimise_circuit(circuit, quantum_computer, quantum_computer_name, quantum_algorithm)
+    optimised_qc, swap_value = doustra_optimise_circuit(circuit, quantum_computer, quantum_computer_name, quantum_algorithm)
+    calculated_statistics = calculate_estimated_average_value_and_dispersion(circuit, optimised_qc, None)
     return CircuitOptimisationResult(
         name=quantum_algorithm,
-        swap_count=optimised_qc.count_ops().get('swap', 0),
+        swap_count=swap_value,
+        cx_count=optimised_qc.count_ops().get('cx', 0),
         depth=optimised_qc.depth(),
-        optimisation_time=time() - time_start
+        expected_value=calculated_statistics.expected_value_after,
+        variance=calculated_statistics.variance_after,
+        fidelity=calculated_statistics.fidelity,
+        optimisation_time=time() - time_start,
+        optimised_circuit=optimised_qc
     )
 
-def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[List[int]], quantum_computer_name: str, quantum_algorithm: str) -> CircuitOptimisationResult:
+def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[List[int]], quantum_computer_name: str, quantum_algorithm: str) -> Tuple[QuantumCircuit, int]:
     time_start = time()
 
     script_path = "./scripts/doustra/optimise_circuit.qsyn"
@@ -69,7 +85,17 @@ def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[Lis
     out_path = f"./dumps/{quantum_algorithm}_output.qasm"
     layout_path = f"./layouts/doustra/{quantum_computer_name}.layout"
 
-    qasm2.dump(circuit.decompose(), open(in_path, "w"))
+    if circuit.parameters:
+        print(f"Circuit has {len(circuit.parameters)} unbound parameters. Binding with random values...")
+        # Bind parameters with random values (or zeros)
+        parameter_values = {param: np.random.uniform(0, 2*np.pi) for param in circuit.parameters}
+        # Alternative: bind with zeros
+        # parameter_values = {param: 0.0 for param in circuit.parameters}
+        
+        bound_circuit = circuit.assign_parameters(parameter_values)
+        qasm2.dump(bound_circuit.decompose(), open(in_path, "w"))
+    else:
+        qasm2.dump(circuit.decompose(), open(in_path, "w"))
 
     if not Path(layout_path).exists():
         convert_to_layout(quantum_computer_name, quantum_computer, circuit.num_qubits)
@@ -86,6 +112,7 @@ def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[Lis
         out_path
     ]
     
+    swap_value = 0
     try:
         result = subprocess.run(
             command,
@@ -95,6 +122,9 @@ def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[Lis
             cwd=os.getcwd()
         )
         print(f"qsyn stdout: {result.stdout}")
+        swap_match = re.search(r'#SWAP:\s*(\d+)', result.stdout)
+        if swap_match:
+            swap_value = int(swap_match.group(1))
         if result.stderr:
             print(f"qsyn stderr: {result.stderr}")
     except subprocess.CalledProcessError as e:
@@ -105,4 +135,4 @@ def doustra_optimise_circuit(circuit: QuantumCircuit, quantum_computer: List[Lis
 
     optimised_qc = QuantumCircuit.from_qasm_str(open(out_path, "r").read())
 
-    return optimised_qc
+    return optimised_qc, swap_value
