@@ -12,9 +12,6 @@ This repository contains code and experiments related to the research of quantum
 - Qiskit
 - C++
 
-## TODO
- - Allow to have random algorithm and topology
- - Add error correction algorithms and check results on different topologies
 
 ## Qiskit AI Local Transpiler (Optional)
 
@@ -26,5 +23,5 @@ Python environment.
 
 ```bash
 uv venv .venv-qiskit-ai --python 3.13
-uv pip install qiskit-ibm-ai-local-transpiler qiskit_aer sympy -p .venv-qiskit-ai
+uv pip install qiskit-ibm-ai-local-transpiler qiskit_aer sympy qiskit_ibm_transpiler -p .venv-qiskit-ai
 ```
