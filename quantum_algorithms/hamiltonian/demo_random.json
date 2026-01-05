@@ -1,0 +1,10 @@
+{
+    "name": "demo_random",
+    "pauli_strings": [
+        {"pauli": "YZZZZYYIY", "coeff": 0.123456},
+        {"pauli": "XYIXXIZYZ", "coeff": -0.234567},
+        {"pauli": "XXIIXXYXI", "coeff": 0.345678},
+        {"pauli": "ZIIIXYYYY", "coeff": -0.456789},
+        {"pauli": "XZYYXZXYI", "coeff": 0.567890}
+    ]
+}

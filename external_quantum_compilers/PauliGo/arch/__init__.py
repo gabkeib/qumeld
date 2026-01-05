@@ -7,7 +7,6 @@ package_directory = os.path.dirname(os.path.abspath(__file__))
 import csv
 import json
 from topologies.topologies import get_topology_by_string, topology_exists
-from routing_algorithms.PauliForest.mapping import get_distance_matrix
 
 class pNode:
     def __init__(self, idx):
@@ -78,6 +77,20 @@ def is_code_reduced(code):
     else:
         reduced = False
     return reduced
+
+def get_distance_matrix(graph, qubits):
+    dist_matrix = np.full((qubits, qubits), np.inf)
+    for i in range(qubits):
+        dist_matrix[i][i] = 0
+    for (a, b) in graph:
+        dist_matrix[a][b] = 1
+        dist_matrix[b][a] = 1
+    for k in range(qubits):
+        for i in range(qubits):
+            for j in range(qubits):
+                if dist_matrix[i][k] + dist_matrix[k][j] < dist_matrix[i][j]:
+                    dist_matrix[i][j] = dist_matrix[i][k] + dist_matrix[k][j]
+    return dist_matrix
 
 def load_graph(code, dist_comp=True, len_func=lambda x:x):
     print(code, topology_exists(code))
