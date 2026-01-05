@@ -1,0 +1,20 @@
+{
+    "name": "H2",
+    "pauli_strings": [
+        {"pauli":  "IIII", "coeff": -0.09820182},
+        {"pauli":  "IIIZ", "coeff": -0.1740751},
+        {"pauli":  "IZII", "coeff": -0.1740751},
+        {"pauli":  "IIZI", "coeff": 0.2242933},
+        {"pauli":  "ZIII", "coeff": 0.2242933},
+        {"pauli":  "IZIZ", "coeff": 0.16891402},
+        {"pauli":  "IIZZ", "coeff": 0.1210099},
+        {"pauli":  "ZIIZ", "coeff": 0.16631441},
+        {"pauli":  "IZZI", "coeff": 0.16631441},
+        {"pauli":  "ZZII", "coeff": 0.1210099},
+        {"pauli":  "ZIZI", "coeff": 0.17504456},
+        {"pauli":  "YYYY", "coeff": 0.04530451},
+        {"pauli":  "XXYY", "coeff": 0.04530451},
+        {"pauli":  "YYXX", "coeff": 0.04530451},
+        {"pauli":  "XXXX", "coeff": 0.04530451}
+    ]
+}

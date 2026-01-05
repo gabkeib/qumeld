@@ -21,8 +21,8 @@ def pad_hamiltonian_to_size(hamiltonian: SparsePauliOp, target_num_qubits: int) 
     # Pad each Pauli string with identities on the right
     padded_paulis = []
     for pauli, coeff in zip(hamiltonian.paulis, hamiltonian.coeffs):
-        pauli_str = str(pauli)  # e.g., "XYZII"
-        padded_str = pauli_str + "I" * padding  # Add identities
+        pauli_str = str(pauli)
+        padded_str = pauli_str + "I" * padding
         padded_paulis.append((padded_str, coeff))
     
     return SparsePauliOp.from_list(padded_paulis)
@@ -32,8 +32,19 @@ def calculate_estimated_average_value_and_dispersion(
     qc_after: QuantumCircuit, 
     hamiltonian: SparsePauliOp = None
 ) -> CircuitOptimisationStatistics:
+    if qc_before.num_clbits > 0 or qc_after.num_clbits > 0:
+        print("Warning: Circuits with classical bits are not supported for estimated value calculation.")
+        return CircuitOptimisationStatistics(
+            expected_value_before=0.0,
+            variance_before=0.0,
+            expected_value_after=0.0,
+            variance_after=0.0,
+            fidelity=0.0
+        )
+
     max_qubits = max(qc_before.num_qubits, qc_after.num_qubits)
     if max_qubits > 9:
+        print("Warning: Circuits with more than 9 qubits are not supported for estimated value calculation.")
         return CircuitOptimisationStatistics(
             expected_value_before=0.0,
             variance_before=0.0,
@@ -46,7 +57,6 @@ def calculate_estimated_average_value_and_dispersion(
     num_qubits_before = qc_before.num_qubits
     num_qubits_after = qc_after.num_qubits
     
-    # Create default Hamiltonian if not provided
     if hamiltonian is None:
         hamiltonian = SparsePauliOp.from_list([
             ("Z" + "I"*(num_qubits_before-1), 1.0)
@@ -79,16 +89,12 @@ def calculate_estimated_average_value_and_dispersion(
         - expected_value_after**2
     )
     
-    # Fidelity calculation needs special handling
-    # We can only compare if we pad the smaller statevector
     if num_qubits_before < num_qubits_after:
         # Pad psi_before with |0⟩ states for ancilla qubits 
         padding_qubits = num_qubits_after - num_qubits_before
         psi_before_padded = psi_before.tensor(Statevector.from_label('0' * padding_qubits))
         fidelity = state_fidelity(psi_before_padded, psi_after)
     elif num_qubits_before > num_qubits_after:
-        # This shouldn't happen (optimization removes qubits)
-        # But handle it anyway
         padding_qubits = num_qubits_before - num_qubits_after
         psi_after_padded = psi_after.tensor(Statevector.from_label('0' * padding_qubits))
         fidelity = state_fidelity(psi_before, psi_after_padded)

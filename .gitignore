@@ -18,5 +18,10 @@ wheels/
 
 dumps/
 
+# LaTeX auxiliary files
+*.tex
+
 results/
 optimisation_results/
+
+.env
