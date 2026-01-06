@@ -4,6 +4,7 @@ from qiskit_ibm_runtime import EstimatorV2 as Estimator, SamplerV2 as Sampler
 
 from quantum_compiler.error_mitigation.base_technique import ErrorMitigationTechnique
 
+
 class ZeroNoiseExtrapolation(ErrorMitigationTechnique):
     """Zero Noise Extrapolation error mitigation technique."""
 
@@ -11,7 +12,9 @@ class ZeroNoiseExtrapolation(ErrorMitigationTechnique):
     def name(self) -> str:
         return "ZeroNoiseExtrapolation"
 
-    def apply_on_circuit(self, circuit: qiskit.QuantumCircuit, backend) -> qiskit.QuantumCircuit:
+    def apply_on_circuit(
+        self, circuit: qiskit.QuantumCircuit, backend
+    ) -> qiskit.QuantumCircuit:
         """Apply Zero Noise Extrapolation to the given circuit.
 
         Args:
@@ -20,7 +23,13 @@ class ZeroNoiseExtrapolation(ErrorMitigationTechnique):
         Returns:
             QuantumCircuit: The modified quantum circuit with Zero Noise Extrapolation applied.
         """
-        return zne.execute_with_zne(circuit, zne.scaling.fold_gates_at_random, num_folds=2, scale_factors=[1, 3, 5], extrapolator=zne.extrapolators.ExponentialExtrapolator())
+        return zne.execute_with_zne(
+            circuit,
+            zne.scaling.fold_gates_at_random,
+            num_folds=2,
+            scale_factors=[1, 3, 5],
+            extrapolator=zne.extrapolators.ExponentialExtrapolator(),
+        )
 
     def apply_on_estimator(self, estimator: Estimator) -> Estimator:
         """Apply Zero Noise Extrapolation to the given Estimator.

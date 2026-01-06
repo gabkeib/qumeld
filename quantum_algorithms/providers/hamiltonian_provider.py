@@ -23,7 +23,7 @@ class HamiltonianProvider(AlgorithmProvider):
         self.hamiltonian_dir = Path(hamiltonian_dir)
         self.default_name = default_name
         self._cache: Dict[str, SparsePauliOp] = {}
-    
+
         self._available_algorithms = self._collect_algorithms()
 
     def _collect_algorithms(self) -> List[str]:
@@ -64,7 +64,7 @@ class HamiltonianProvider(AlgorithmProvider):
         Generates a SparsePauliOp based on provided kwargs.
 
         Args:
-            **kwargs: 
+            **kwargs:
                 - name (str): name of the JSON file to load.
                 - graph (List[List[int]]): adjacency matrix for dynamic QAOA generation.
         """
@@ -77,7 +77,9 @@ class HamiltonianProvider(AlgorithmProvider):
         elif "graph" in kwargs:
             op = self._generate_qaoa_max_cut(kwargs["graph"])
         else:
-             raise ValueError("HamiltonianProvider requires 'name' (or default_name) or 'graph'")
+            raise ValueError(
+                "HamiltonianProvider requires 'name' (or default_name) or 'graph'"
+            )
 
         return op
 
@@ -86,22 +88,22 @@ class HamiltonianProvider(AlgorithmProvider):
             return self._cache[name]
 
         file_path = self.hamiltonian_dir / f"{name}.json"
-        
+
         if not file_path.exists():
             raise FileNotFoundError(f"Benchmark {name} not found at {file_path}")
 
         try:
-            with open(file_path, 'r') as f:
+            with open(file_path, "r") as f:
                 data = json.load(f)
-            
+
             # Assuming JSON structure: {'pauli_strings': [{'pauli': 'ZZ', 'coeff': 1.0}, ...]}
-            paulis = [op['pauli'] for op in data['pauli_strings']]
-            coeffs = [op.get('coeff', 1.0) for op in data['pauli_strings']]
-            
+            paulis = [op["pauli"] for op in data["pauli_strings"]]
+            coeffs = [op.get("coeff", 1.0) for op in data["pauli_strings"]]
+
             op = SparsePauliOp(paulis, coeffs=coeffs)
             self._cache[name] = op
             return op
-            
+
         except json.JSONDecodeError:
             raise ValueError(f"Invalid JSON in {file_path}")
 
@@ -109,15 +111,15 @@ class HamiltonianProvider(AlgorithmProvider):
         pauli_list = []
         coeffs = []
         n = len(graph)
-        
+
         for i in range(n):
             for j in range(i + 1, n):
                 if graph[i][j] == 1:
-                    s = ['I'] * n
-                    s[i] = 'Z'
-                    s[j] = 'Z'
+                    s = ["I"] * n
+                    s[i] = "Z"
+                    s[j] = "Z"
                     # Qiskit uses little-endian (q0 is rightmost)
-                    pauli_list.append("".join(s)[::-1]) 
+                    pauli_list.append("".join(s)[::-1])
                     coeffs.append(0.5)
 
         return SparsePauliOp(pauli_list, coeffs=coeffs)

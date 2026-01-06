@@ -4,6 +4,7 @@ from qiskit_ibm_runtime import EstimatorV2 as Estimator, SamplerV2 as Sampler
 
 from quantum_compiler.error_mitigation.base_technique import ErrorMitigationTechnique
 
+
 class Trex(ErrorMitigationTechnique):
     """T-REx error mitigation technique."""
 
@@ -11,7 +12,9 @@ class Trex(ErrorMitigationTechnique):
     def name(self) -> str:
         return "Trex"
 
-    def apply_on_circuit(self, circuit: qiskit.QuantumCircuit, backend) -> qiskit.QuantumCircuit:
+    def apply_on_circuit(
+        self, circuit: qiskit.QuantumCircuit, backend
+    ) -> qiskit.QuantumCircuit:
         pass
 
     def apply_on_estimator(self, estimator: Estimator) -> Estimator:
@@ -24,4 +27,3 @@ class Trex(ErrorMitigationTechnique):
         estimator.options.resilience.measure_noise_learning.num_randomizations = 32
         estimator.options.resilience.measure_noise_learning.shots_per_randomization = 10
         return estimator
-

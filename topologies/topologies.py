@@ -760,71 +760,214 @@ def ionq_harmony_q9():
 
     return (graph, qubits)
 
+
 def google_willow_q105():
     qubits = 105
     coords = [
-        (0,6), (0,7), (0,8),
-        (1,5), (1,6), (1,7), (1,8),
-        (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10),
-        (3,3), (3,4), (3,5), (3,6), (3,7), (3,8), (3,9), (3,10),
-        (4,2), (4,3), (4,4), (4,5), (4,6), (4,7), (4,8), (4,9), (4,10), (4,11), (4,12),
-        (5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (5,7), (5,8), (5,9), (5,10), (5,11), (5,12),
-        (6,0), (6,1), (6,2), (6,3), (6,4), (6,5), (6,6), (6,7), (6,8), (6,9), (6,10), (6,11), (6,12), (6,13), (6,14),
-        (7,2), (7,3), (7,4), (7,5), (7,6), (7,7), (7,8), (7,9), (7,10), (7,11), (7,12), (7,13),
-        (8,2), (8,3), (8,4), (8,5), (8,6), (8,7), (8,8), (8,9), (8,10), (8,11), (8,12),
-        (9,4), (9,5), (9,6), (9,7), (9,8), (9,9), (9,10), (9,11),
-        (10,4), (10,5), (10,6), (10,7), (10,8), (10,9), (10,10),
-        (11,6), (11,7), (11,8), (11,9),
-        (12,6), (12,7), (12,8)
+        (0, 6),
+        (0, 7),
+        (0, 8),
+        (1, 5),
+        (1, 6),
+        (1, 7),
+        (1, 8),
+        (2, 4),
+        (2, 5),
+        (2, 6),
+        (2, 7),
+        (2, 8),
+        (2, 9),
+        (2, 10),
+        (3, 3),
+        (3, 4),
+        (3, 5),
+        (3, 6),
+        (3, 7),
+        (3, 8),
+        (3, 9),
+        (3, 10),
+        (4, 2),
+        (4, 3),
+        (4, 4),
+        (4, 5),
+        (4, 6),
+        (4, 7),
+        (4, 8),
+        (4, 9),
+        (4, 10),
+        (4, 11),
+        (4, 12),
+        (5, 1),
+        (5, 2),
+        (5, 3),
+        (5, 4),
+        (5, 5),
+        (5, 6),
+        (5, 7),
+        (5, 8),
+        (5, 9),
+        (5, 10),
+        (5, 11),
+        (5, 12),
+        (6, 0),
+        (6, 1),
+        (6, 2),
+        (6, 3),
+        (6, 4),
+        (6, 5),
+        (6, 6),
+        (6, 7),
+        (6, 8),
+        (6, 9),
+        (6, 10),
+        (6, 11),
+        (6, 12),
+        (6, 13),
+        (6, 14),
+        (7, 2),
+        (7, 3),
+        (7, 4),
+        (7, 5),
+        (7, 6),
+        (7, 7),
+        (7, 8),
+        (7, 9),
+        (7, 10),
+        (7, 11),
+        (7, 12),
+        (7, 13),
+        (8, 2),
+        (8, 3),
+        (8, 4),
+        (8, 5),
+        (8, 6),
+        (8, 7),
+        (8, 8),
+        (8, 9),
+        (8, 10),
+        (8, 11),
+        (8, 12),
+        (9, 4),
+        (9, 5),
+        (9, 6),
+        (9, 7),
+        (9, 8),
+        (9, 9),
+        (9, 10),
+        (9, 11),
+        (10, 4),
+        (10, 5),
+        (10, 6),
+        (10, 7),
+        (10, 8),
+        (10, 9),
+        (10, 10),
+        (11, 6),
+        (11, 7),
+        (11, 8),
+        (11, 9),
+        (12, 6),
+        (12, 7),
+        (12, 8),
     ]
-    
+
     coord_to_node = {c: i for i, c in enumerate(coords)}
 
     graph = []
     for i, (r, c) in enumerate(coords):
         neighbors = [
-            (r-1, c), (r+1, c),
-            (r, c-1), (r, c+1),
+            (r - 1, c),
+            (r + 1, c),
+            (r, c - 1),
+            (r, c + 1),
         ]
         for nbr in neighbors:
             if nbr in coord_to_node:
                 j = coord_to_node[nbr]
                 if [j, i] not in graph:
                     graph.append([i, j])
-                    
+
     return graph, qubits
+
 
 def hexagonal_lattice_q54():
     qubits = 54
     coords = [
-        (0,3), (0,5), (0,7),
-        (1,2), (1,4), (1,6), (1,8),
-        (2,2), (2,4), (2,6), (2,8),
-        (3,1), (3,3), (3,5), (3,7), (3,9),
-        (4,1), (4,3), (4,5), (4,7), (4,9),
-        (5,0), (5,2), (5,4), (5,6), (5,8), (5,10),
-        (6,0), (6,2), (6,4), (6,6), (6,8), (6,10),
-        (7,1), (7,3), (7,5), (7,7), (7,9),
-        (8,1), (8,3), (8,5), (8,7), (8,9),
-        (9,2), (9,4), (9,6), (9,8),
-        (10,2), (10,4), (10,6), (10,8),
-        (11,3), (11,5), (11,7),
+        (0, 3),
+        (0, 5),
+        (0, 7),
+        (1, 2),
+        (1, 4),
+        (1, 6),
+        (1, 8),
+        (2, 2),
+        (2, 4),
+        (2, 6),
+        (2, 8),
+        (3, 1),
+        (3, 3),
+        (3, 5),
+        (3, 7),
+        (3, 9),
+        (4, 1),
+        (4, 3),
+        (4, 5),
+        (4, 7),
+        (4, 9),
+        (5, 0),
+        (5, 2),
+        (5, 4),
+        (5, 6),
+        (5, 8),
+        (5, 10),
+        (6, 0),
+        (6, 2),
+        (6, 4),
+        (6, 6),
+        (6, 8),
+        (6, 10),
+        (7, 1),
+        (7, 3),
+        (7, 5),
+        (7, 7),
+        (7, 9),
+        (8, 1),
+        (8, 3),
+        (8, 5),
+        (8, 7),
+        (8, 9),
+        (9, 2),
+        (9, 4),
+        (9, 6),
+        (9, 8),
+        (10, 2),
+        (10, 4),
+        (10, 6),
+        (10, 8),
+        (11, 3),
+        (11, 5),
+        (11, 7),
     ]
     coord_to_node = {c: i for i, c in enumerate(coords)}
 
     graph = []
     for i, (r, c) in enumerate(coords):
         neighbors = [
-            (r-1, c), (r-1, c-1), (r-1, c+1),
-            (r+1, c), (r+1, c-1), (r+1, c+1),
+            (r - 1, c),
+            (r - 1, c - 1),
+            (r - 1, c + 1),
+            (r + 1, c),
+            (r + 1, c - 1),
+            (r + 1, c + 1),
         ]
         for nbr in neighbors:
             if nbr in coord_to_node:
                 j = coord_to_node[nbr]
                 if [j, i] not in graph:
                     graph.append([i, j])
-                    
+
     return graph, qubits
+
 
 def riken_fujitsu_q256():
     qubits = 256
@@ -839,30 +982,33 @@ def riken_fujitsu_q256():
                 graph.append([node, node + size])
     return graph, qubits
 
+
 topology_functions = {
-        "ibm_reuschlikon_q16": ibm_reuschlikon_q16,
-        "ibm_tokyo_q20": ibm_tokyo_q20,
-        "ibm_paughkeepsie_q20": ibm_paughkeepsie_q20,
-        "ibm_cambridge_q28": ibm_cambridge_q28,
-        "ibm_montreal_q27": ibm_montreal_q27,
-        "ibm_almaden_q20": ibm_almaden_q20,
-        "ibm_rochester_q53": ibm_rochester_q53,
-        "ibm_manhattan_q65": ibm_manhattan_q65,
-        "ibm_heron_q133": ibm_heron_q133,
-        "ibm_eagle_q127": ibm_eagle_q127,
-        "ibm_falcon_q27": ibm_falcon_q27,
-        "rigetti_novera_q9": rigetti_novera_q9,
-        "ionq_harmony_q9": ionq_harmony_q9,
-        "google_willow_q105": google_willow_q105,
-        "hexagonal_lattice_q54": hexagonal_lattice_q54,
-        "riken_fujitsu_q256": riken_fujitsu_q256,
-    }
+    "ibm_reuschlikon_q16": ibm_reuschlikon_q16,
+    "ibm_tokyo_q20": ibm_tokyo_q20,
+    "ibm_paughkeepsie_q20": ibm_paughkeepsie_q20,
+    "ibm_cambridge_q28": ibm_cambridge_q28,
+    "ibm_montreal_q27": ibm_montreal_q27,
+    "ibm_almaden_q20": ibm_almaden_q20,
+    "ibm_rochester_q53": ibm_rochester_q53,
+    "ibm_manhattan_q65": ibm_manhattan_q65,
+    "ibm_heron_q133": ibm_heron_q133,
+    "ibm_eagle_q127": ibm_eagle_q127,
+    "ibm_falcon_q27": ibm_falcon_q27,
+    "rigetti_novera_q9": rigetti_novera_q9,
+    "ionq_harmony_q9": ionq_harmony_q9,
+    "google_willow_q105": google_willow_q105,
+    "hexagonal_lattice_q54": hexagonal_lattice_q54,
+    "riken_fujitsu_q256": riken_fujitsu_q256,
+}
+
 
 def get_topology_by_string(name):
     if name in topology_functions:
         return topology_functions[name]()
     else:
         raise ValueError("Topology not found")
+
 
 def topology_exists(name):
     return name in topology_functions

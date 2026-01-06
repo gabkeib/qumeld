@@ -3,6 +3,7 @@ from qiskit_ibm_runtime import EstimatorV2 as Estimator, SamplerV2 as Sampler
 
 from quantum_compiler.error_mitigation.base_technique import ErrorMitigationTechnique
 
+
 class PauliTwirling(ErrorMitigationTechnique):
     """Pauli Twirling error mitigation technique."""
 
@@ -10,7 +11,9 @@ class PauliTwirling(ErrorMitigationTechnique):
     def name(self) -> str:
         return "PauliTwirling"
 
-    def apply_on_circuit(self, circuit: qiskit.QuantumCircuit, backend) -> qiskit.QuantumCircuit:
+    def apply_on_circuit(
+        self, circuit: qiskit.QuantumCircuit, backend
+    ) -> qiskit.QuantumCircuit:
         pass
 
     def apply_on_estimator(self, estimator: Estimator) -> Estimator:
@@ -23,5 +26,3 @@ class PauliTwirling(ErrorMitigationTechnique):
         estimator.options.twirling.num_randomizations = 32
         estimator.options.twirling.shots_per_randomization = 100
         return estimator
-
-

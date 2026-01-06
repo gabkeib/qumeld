@@ -10,9 +10,7 @@ def run_algorithm_validation_tests():
     mappers_discovery = MapperRegistry()
     mappers = mappers_discovery.get_all_mappers()
 
-    backend_factory = BackendFactory(
-        legacy_topology_dict=topology_functions
-    )
+    backend_factory = BackendFactory(legacy_topology_dict=topology_functions)
     backends = backend_factory.get_all_backends()
 
     basic_circuits = get_test_circuits()

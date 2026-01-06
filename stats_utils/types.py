@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class CircuitOptimisationStatistics:
     variance_before: float = None
@@ -7,5 +8,3 @@ class CircuitOptimisationStatistics:
     fidelity: float = None
     expected_value_after: float = None
     variance_after: float = None
-
-

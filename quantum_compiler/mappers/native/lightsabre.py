@@ -14,11 +14,11 @@ class LightSABRE(QubitMapper):
     @property
     def name(self) -> str:
         return "lightSABRE"
-    
+
     @property
     def supports_circuit_mapping(self) -> bool:
         return True
-    
+
     @property
     def supports_raw_pauli_string_mapping(self) -> bool:
         return False
@@ -27,26 +27,33 @@ class LightSABRE(QubitMapper):
         self,
         circuit: QuantumCircuit,
         backend: BackendV2,
-        circuit_name: Optional[str] = None
+        circuit_name: Optional[str] = None,
     ) -> CircuitOptimisationResult:
         time_start = time()
 
-        pm: PassManager = generate_preset_pass_manager(optimization_level=3, backend=backend)
+        pm: PassManager = generate_preset_pass_manager(
+            optimization_level=3, backend=backend
+        )
         compiled_circuit = pm.run(circuit)
 
-        calculated_statistics = calculate_estimated_average_value_and_dispersion(circuit, compiled_circuit, None)
+        calculated_statistics = calculate_estimated_average_value_and_dispersion(
+            circuit, compiled_circuit, None
+        )
         return CircuitOptimisationResult(
             optimised_circuit=compiled_circuit,
             name=circuit_name,
-            swap_count=compiled_circuit.count_ops().get('swap', 0),
-            cx_count=compiled_circuit.count_ops().get('cx', 0) + compiled_circuit.count_ops().get('swap', 0) * 3,
+            swap_count=compiled_circuit.count_ops().get("swap", 0),
+            cx_count=compiled_circuit.count_ops().get("cx", 0)
+            + compiled_circuit.count_ops().get("swap", 0) * 3,
             depth=compiled_circuit.depth(),
             expected_value=calculated_statistics.expected_value_after,
             variance=calculated_statistics.variance_after,
             fidelity=calculated_statistics.fidelity,
             optimisation_time=time() - time_start,
-            mapper=self.name
+            mapper=self.name,
         )
 
-    def map_pauli_strings(self, pauli_strings: List[str], backend) -> CircuitOptimisationResult:
-        pass 
+    def map_pauli_strings(
+        self, pauli_strings: List[str], backend
+    ) -> CircuitOptimisationResult:
+        pass

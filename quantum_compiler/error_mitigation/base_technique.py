@@ -1,16 +1,17 @@
 from abc import ABC, abstractmethod
 
 from qiskit import QuantumCircuit
-from qiskit.providers import BackendV2  
+from qiskit.providers import BackendV2
 from qiskit_ibm_runtime import EstimatorV2 as Estimator, SamplerV2 as Sampler
 
 
 class ErrorMitigationTechnique(ABC):
     """Base class for error mitigation techniques."""
 
-
     @abstractmethod
-    def apply_on_circuit(self, circuit: QuantumCircuit, backend: BackendV2) -> QuantumCircuit:
+    def apply_on_circuit(
+        self, circuit: QuantumCircuit, backend: BackendV2
+    ) -> QuantumCircuit:
         """Apply the error mitigation technique to the given circuit.
 
         Args:

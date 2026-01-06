@@ -9,17 +9,21 @@ from scipy.optimize import minimize
 from quantum_algorithms.registry import AlgorithmRegistry
 
 
-def get_ansatz(num_qubits: int, entanglement: str, decompose: bool = False) -> QuantumCircuit:
+def get_ansatz(
+    num_qubits: int, entanglement: str, decompose: bool = False
+) -> QuantumCircuit:
     circ = efficient_su2(num_qubits=num_qubits, entanglement=entanglement)
     if decompose:
         circ = circ.decompose()
     return circ
+
 
 def cost_func(params: list, ansatz: QuantumCircuit, H: QuantumCircuit, estimator):
     pub = (ansatz, [H], [params])
     result = estimator.run(pubs=[pub]).result()
     energy = result[0].data.evs[0]
     return energy
+
 
 def run_vqe():
     backend = FakeNairobiV2()
@@ -29,7 +33,7 @@ def run_vqe():
     x0 = 2 * np.pi * np.random.random(ansatz.num_parameters)
 
     algorithm_registry = AlgorithmRegistry()
-    
+
     hamiltonian: QuantumCircuit = algorithm_registry.get_circuit(name="h2")
 
     backend_sim = AerSimulator.from_backend(backend)
@@ -37,7 +41,7 @@ def run_vqe():
 
     target = backend.target
     pm = generate_preset_pass_manager(target=target, optimization_level=3)
-    
+
     ansatz_isa = pm.run(ansatz)
     hamiltonian_isa = hamiltonian.apply_layout(ansatz_isa.layout)
 
@@ -50,6 +54,7 @@ def run_vqe():
     )
 
     print(res)
+
 
 if __name__ == "__main__":
     run_vqe()

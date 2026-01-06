@@ -7,7 +7,7 @@ import numpy as np
 from qiskit_aer import AerSimulator
 from scipy.optimize import minimize
 
- 
+
 # Import an estimator, this time from qiskit (we will import from Runtime for real hardware)
 from qiskit.primitives import BackendEstimatorV2
 
@@ -17,6 +17,7 @@ def get_ansatz(num_qubits, entanglement, decompose=False):
     if decompose:
         circ = circ.decompose()
     return circ
+
 
 def cost_func(params, ansatz, H, estimator):
     pub = (ansatz, [H], [params])
@@ -35,7 +36,7 @@ def run_vqe(hamiltonian, num_qubits, backend):
 
     target = backend.target
     pm = generate_preset_pass_manager(target=target, optimization_level=3)
-    
+
     ansatz_isa = pm.run(ansatz)
     hamiltonian_isa = hamiltonian.apply_layout(ansatz_isa.layout)
 

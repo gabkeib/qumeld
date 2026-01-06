@@ -6,6 +6,7 @@ from qiskit.providers import BackendV2
 
 from quantum_compiler.core.types import CircuitOptimisationResult
 
+
 class QubitMapper(ABC):
     @property
     @abstractmethod
@@ -30,8 +31,8 @@ class QubitMapper(ABC):
         self,
         circuit: QuantumCircuit,
         backend: BackendV2,
-        circuit_name: Optional[str] = None
-    )-> CircuitOptimisationResult:
+        circuit_name: Optional[str] = None,
+    ) -> CircuitOptimisationResult:
         """Map the given quantum circuit to the target qubit architecture."""
         pass
 
@@ -40,7 +41,7 @@ class QubitMapper(ABC):
         self,
         pauli_strings: List[str],
         backend: BackendV2,
-        circuit_name: Optional[str] = None
+        circuit_name: Optional[str] = None,
     ) -> CircuitOptimisationResult:
         """Map the given Pauli strings to the target qubit architecture."""
         pass

@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
 from typing import List
 
+
 class Topology(ABC):
     """
     Abstract base class for defining quantum computer topologies.
     """
-    
+
     @property
     @abstractmethod
     def name(self) -> str:

@@ -1,8 +1,8 @@
 from quantum_compiler.utils.class_discovery import discover_subclasses
 from quantum_compiler.error_mitigation.base_technique import ErrorMitigationTechnique
 
+
 class ErrorMitigationRegistry:
-    
     def __init__(self):
         self._techniques = {}
         self._discover_techniques()
@@ -11,10 +11,10 @@ class ErrorMitigationRegistry:
         """Scan specified paths and discover all error mitigation technique implementations."""
         discovered = discover_subclasses(
             base_class=ErrorMitigationTechnique,
-            module_paths=['quantum_compiler.error_mitigation.techniques'],
-            instantiate=True
+            module_paths=["quantum_compiler.error_mitigation.techniques"],
+            instantiate=True,
         )
-        
+
         for technique_instance in discovered.values():
             technique_name = technique_instance.name
             self._techniques[technique_name] = technique_instance
