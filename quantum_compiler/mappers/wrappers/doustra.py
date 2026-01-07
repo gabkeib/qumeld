@@ -14,7 +14,7 @@ from pathlib import Path
 import re
 import numpy as np
 
-from quantum_compiler.core.types import CircuitOptimisationResult
+from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from quantum_compiler.utils.paths import get_project_root
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
@@ -61,7 +61,7 @@ class Doustra(QubitMapper):
         )
 
     def map_pauli_strings(
-        self, pauli_strings: List[str], backend
+        self, pauli_strings: List[PauliString], backend
     ) -> CircuitOptimisationResult:
         pass
 

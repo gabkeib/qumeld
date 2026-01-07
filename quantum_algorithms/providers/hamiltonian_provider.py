@@ -6,6 +6,7 @@ from qiskit import QuantumCircuit, transpile
 from qiskit.quantum_info import SparsePauliOp
 
 from quantum_algorithms.base_provider import AlgorithmProvider
+from quantum_compiler.core.types import PauliString
 from quantum_compiler.utils.paths import get_project_root
 from qiskit.circuit.library import PauliEvolutionGate
 
@@ -54,11 +55,13 @@ class HamiltonianProvider(AlgorithmProvider):
 
         return circuit.decompose()
 
-    def get_pauli_strings(self, **kwargs) -> List[str]:
+    def get_pauli_strings(self, **kwargs) -> List[PauliString]:
         op = self._generate_operator(**kwargs)
 
-        return op.paulis.to_labels()
-
+        pauli_labels = op.paulis.to_labels()
+        coeffs = op.coeffs.tolist()
+        return [PauliString(pauli, coeff) for pauli, coeff in zip(pauli_labels, coeffs)]
+    
     def _generate_operator(self, **kwargs) -> SparsePauliOp:
         """
         Generates a SparsePauliOp based on provided kwargs.

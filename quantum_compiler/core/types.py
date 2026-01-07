@@ -57,3 +57,15 @@ class CircuitOptimisationResult:
 
     def to_json(self) -> str:
         return json.dumps(self.to_dict(), indent=2)
+
+@dataclass
+class PauliString:
+    """Class representing a Pauli string with its coefficient.
+    
+    Attributes:
+        pauli_string (str): The Pauli string representation (example: "XIZY").
+        coeff (complex): The coefficient associated with the Pauli string.
+    """
+
+    pauli_string: str
+    coeff: complex

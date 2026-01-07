@@ -4,7 +4,7 @@ from typing import List, Optional
 from qiskit import QuantumCircuit
 from qiskit.providers import BackendV2
 
-from quantum_compiler.core.types import CircuitOptimisationResult
+from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 
 
 class QubitMapper(ABC):
@@ -39,7 +39,7 @@ class QubitMapper(ABC):
     @abstractmethod
     def map_pauli_strings(
         self,
-        pauli_strings: List[str],
+        pauli_strings: List[PauliString],
         backend: BackendV2,
         circuit_name: Optional[str] = None,
     ) -> CircuitOptimisationResult:

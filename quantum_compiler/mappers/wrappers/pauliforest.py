@@ -8,7 +8,7 @@ from typing import Optional, List
 from external_quantum_compilers.PauliGo.compiler import Compiler
 from external_quantum_compilers.PauliGo.benchmark.mypauli import pauliString
 
-from quantum_compiler.core.types import CircuitOptimisationResult
+from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
 
@@ -35,7 +35,7 @@ class PauliForest(QubitMapper):
 
     def map_pauli_strings(
         self,
-        pauli_strings: List[str],
+        pauli_strings: List[PauliString],
         backend: BackendV2,
         circuit_name: Optional[str] = None,
     ) -> CircuitOptimisationResult:
@@ -68,5 +68,5 @@ class PauliForest(QubitMapper):
         bn = len(origin_blocks)
         return blocks
 
-    def convert_string_to_pauli_string(self, pauli_string):
-        return [[pauli_string, 1.0]]  # current rotation is 0
+    def convert_string_to_pauli_string(self, pauli_string: PauliString):
+        return [[pauli_string.pauli_string, pauli_string.coeff]]  # current rotation is 0

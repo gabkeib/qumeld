@@ -1,10 +1,16 @@
 from abc import ABC, abstractmethod
 from typing import List
 from qiskit import QuantumCircuit
+from qiskit.quantum_info import SparsePauliOp
 
 
 class AlgorithmProvider(ABC):
     """Base class for quantum algorithm input providers."""
+
+    @property
+    def name(self) -> str:
+        """Return the name of the provider."""
+        return self.__class__.__name__
 
     @abstractmethod
     def get_circuit(self, **kwargs) -> QuantumCircuit:

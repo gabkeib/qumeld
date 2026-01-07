@@ -2,8 +2,8 @@ from typing import Dict, List
 
 from qiskit import QuantumCircuit
 from quantum_algorithms.base_provider import AlgorithmProvider
-from quantum_algorithms.providers.hamiltonian_provider import HamiltonianProvider
-
+from quantum_compiler.core.types import PauliString
+from quantum_compiler.utils.class_discovery import discover_subclasses 
 
 class AlgorithmRegistry:
     """
@@ -12,6 +12,9 @@ class AlgorithmRegistry:
 
     def __init__(self, load_defaults: bool = True):
         self._providers: Dict[str, AlgorithmProvider] = {}
+        self.base_paths = [
+            "quantum_algorithms.providers",
+        ]
         self._available_algorithms: List[str] = []
         if load_defaults:
             self._discover_default_algorithms()
@@ -22,10 +25,17 @@ class AlgorithmRegistry:
 
     def _discover_default_algorithms(self):
         """Auto-discover known providers and files."""
-        ham_provider = HamiltonianProvider()
-        self.register("hamiltonian", ham_provider)
 
-        self._available_algorithms.extend(ham_provider.available_algorithms)
+        discovered = discover_subclasses(
+            base_class=AlgorithmProvider, module_paths=self.base_paths, instantiate=True
+        )
+
+        for algorithm_provider in discovered.values():
+            print(algorithm_provider)
+            provider_name = algorithm_provider.name
+
+            self.register(provider_name, algorithm_provider)
+            self._available_algorithms.extend(algorithm_provider.available_algorithms)
 
     def get_circuit(self, **kwargs) -> QuantumCircuit:
         """
@@ -39,7 +49,7 @@ class AlgorithmRegistry:
 
         return provider.get_circuit(**kwargs)
 
-    def get_pauli_strings(self, **kwargs) -> List[str]:
+    def get_pauli_strings(self, **kwargs) -> List[PauliString]:
         """
         Directly get Pauli strings by algorithm name.
         """

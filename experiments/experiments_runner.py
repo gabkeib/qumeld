@@ -48,14 +48,20 @@ class ExperimentRunner:
         backend = self.backend_factory.get_backend(config.quantum_computer)
         mapper = self.mapper_registry.get_mapper(config.mapper_name)
 
-        if mapper.supports_circuit_mapping:
-            result = self._run_circuit_experiment(mapper, backend, config)
-        elif mapper.supports_raw_pauli_string_mapping:
-            result = self._run_pauli_experiment(mapper, backend, config)
-        else:
-            raise ValueError(
-                f"Algorithm '{config.quantum_algorithm}' does not support "
-                "either circuits or Pauli strings"
+        try:
+            if mapper.supports_circuit_mapping:
+                result = self._run_circuit_experiment(mapper, backend, config)
+            elif mapper.supports_raw_pauli_string_mapping:
+                result = self._run_pauli_experiment(mapper, backend, config)
+            else:
+                raise ValueError(
+                    f"Algorithm '{config.quantum_algorithm}' does not support "
+                    "either circuits or Pauli strings"
+                )
+        except Exception as e:
+            print(f"Experiment failed with error: {e}")
+            result = CircuitOptimisationResult.create_failed(
+                reason=str(e), original_circuit=None
             )
 
         self._save_results_to_file(result, config)
@@ -87,13 +93,13 @@ class ExperimentRunner:
         pauli_strings = self.algorithm_registry.get_pauli_strings(
             **config.algorithm_params
         )
-        if len(pauli_strings[0]) > backend.num_qubits:
+        if len(pauli_strings[0].pauli_string) > backend.num_qubits:
             print(
-                f"SKIPPING: Pauli strings require {len(pauli_strings[0])} qubits, "
+                f"SKIPPING: Pauli strings require {len(pauli_strings[0].pauli_string)} qubits, "
                 f"but backend '{backend.name}' only has {backend.num_qubits} qubits."
             )
             return CircuitOptimisationResult.create_failed(
-                reason=f"Circuit too large: {len(pauli_strings[0])} > {backend.num_qubits}",
+                reason=f"Circuit too large: {len(pauli_strings[0].pauli_string)} > {backend.num_qubits}",
                 original_circuit=None,
             )
         return mapper.map_pauli_strings(
@@ -111,4 +117,11 @@ class ExperimentRunner:
 
         if result.optimised_circuit is not None:
             qasm_path = config.output_dir / f"{config.mapper_name}.qasm"
-            qasm2.dump(result.optimised_circuit.decompose(), open(qasm_path, "w"))
+            circuit_to_save = result.optimised_circuit.decompose()
+            if circuit_to_save.num_parameters > 0:
+                print(
+                    f"Warning: Skipping QASM export for {config.mapper_name} "
+                    f"- circuit has {circuit_to_save.num_parameters} unbound parameters"
+                )
+            else:
+                qasm2.dump(result.optimised_circuit.decompose(), open(qasm_path, "w"))

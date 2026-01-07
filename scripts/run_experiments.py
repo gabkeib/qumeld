@@ -45,8 +45,7 @@ def run_experiments(
         for algorithm_name in algorithms:
             for mapper in optimizers:
                 algorithm_params: dict[str, Any] = {"name": algorithm_name}
-                if algorithm_name == "qaoa":
-                    # Example of passing algorithm-specific parameters
+                if algorithm_name == "qaoa" or algorithm_name == "qaoa_ansatz":
                     algorithm_params["graph"] = [
                         [0, 1, 1, 0, 1],
                         [1, 0, 1, 0, 0],
@@ -54,6 +53,10 @@ def run_experiments(
                         [0, 0, 1, 0, 1],
                         [1, 0, 0, 1, 0],
                     ]
+                    algorithm_params["num_qubits"] = 5
+
+                if algorithm_name == "efficient_su2":
+                    algorithm_params["num_qubits"] = 5
 
                 print(
                     f"Running experiment: Backend={backend}, Algorithm={algorithm_name}, Mapper={mapper}"

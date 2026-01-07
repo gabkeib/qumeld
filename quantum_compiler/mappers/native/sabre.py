@@ -6,7 +6,7 @@ from time import time
 from qiskit.providers import BackendV2
 from typing import Optional, List
 
-from quantum_compiler.core.types import CircuitOptimisationResult
+from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from qiskit.transpiler.passes import SabreLayout, SabreSwap
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
@@ -73,6 +73,6 @@ class SABRE(QubitMapper):
         )
 
     def map_pauli_strings(
-        self, pauli_strings: List[str], backend
+        self, pauli_strings: List[PauliString], backend
     ) -> CircuitOptimisationResult:
         pass
