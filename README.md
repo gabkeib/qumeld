@@ -34,7 +34,7 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gabkeib/RQCTOA
+   git clone https://github.com/gabkeib/qumeld.git
    ```
 
 2. Download uv if you don't have it already:
@@ -120,7 +120,7 @@ For more examples, see the [examples/](examples/) directory:
 - `examples/run_with_error_mitigation.py`: Example of running circuit optimisation with error mitigation techniques.
 
 
-## Qiskit AI Local Transpiler (Optional)
+## Preparations for Qiskit AI Local Transpiler
 
 Due to an upstream dependency conflict (`networkx==2.8.5`),
 the Qiskit AI local transpiler must be installed in a separate
@@ -133,7 +133,11 @@ uv venv .venv-qiskit-ai --python 3.13
 uv pip install qiskit-ibm-ai-local-transpiler qiskit_aer sympy qiskit_ibm_transpiler -p .venv-qiskit-ai
 ```
 
-### Attribution
+## Used algorithms citations
+
+
+
+## Attribution
 
 This framework is a part of the research work for the Master's thesis:
 "Research of Quantum Computer Topologies for Optimization Algorithms"
