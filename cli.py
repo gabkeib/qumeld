@@ -142,7 +142,7 @@ def optimize_circuit(
         quantum_computer=topology,
         mappers_to_use=optimizers,
         output_dir=output_dir,
-        file_name=circuit_filename
+        file_name=circuit_filename,
     )
 
     # Print summary
