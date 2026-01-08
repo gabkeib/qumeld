@@ -14,10 +14,9 @@ from quantum_compiler.backends.custom_qiskit import ResearchBackend
 from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from quantum_compiler.utils.paths import get_project_root
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
+import logging
 
-
-ISKIT_AI_PYTHON = ".venv-qiskit-ai/bin/python"
-
+log = logging.getLogger(__name__)
 
 def serialize_backend(backend: ResearchBackend) -> dict:
     """Convert CustomBackend to a serializable dictionary"""
@@ -55,8 +54,6 @@ def call_qiskit_ai_function(function_name: str, *args, **kwargs):
     pickled_input = pickle.dumps(input_data)
     project_root = get_project_root()
 
-    print("Project root:", project_root)
-
     env = os.environ.copy()
     env["PYTHONPATH"] = str(project_root)
 
@@ -84,15 +81,14 @@ def call_qiskit_ai_function(function_name: str, *args, **kwargs):
     process.stdin.write(pickled_input)
     process.stdin.close()
 
-    print(f"Worker output for {function_name}:")
+    log.info(f"Worker output for {function_name}:")
 
     for line in iter(process.stdout.readline, b""):
-        print(line.decode("utf-8", errors="replace"), end="")
+        log.info(line.decode("utf-8", errors="replace").rstrip())
 
     process.wait()
 
-    print("=" * 60)
-
+    log.info("=" * 60)
     if process.returncode != 0:
         try:
             os.unlink(result_path)
@@ -102,7 +98,6 @@ def call_qiskit_ai_function(function_name: str, *args, **kwargs):
             f"Worker process failed with return code {process.returncode}"
         )
 
-    # Read result from file
     try:
         with open(result_path, "rb") as f:
             result = pickle.load(f)
@@ -110,7 +105,6 @@ def call_qiskit_ai_function(function_name: str, *args, **kwargs):
     except Exception as e:
         raise RuntimeError(f"Failed to read result: {e}")
 
-    # Check if result is an error
     if isinstance(result, dict) and "error" in result:
         raise RuntimeError(f"Worker error: {result['error']}\n{result['traceback']}")
 

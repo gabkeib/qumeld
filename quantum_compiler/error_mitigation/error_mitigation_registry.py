@@ -1,6 +1,8 @@
 from quantum_compiler.utils.class_discovery import discover_subclasses
 from quantum_compiler.error_mitigation.base_technique import ErrorMitigationTechnique
+import logging
 
+log = logging.getLogger(__name__)
 
 class ErrorMitigationRegistry:
     def __init__(self):
@@ -18,13 +20,13 @@ class ErrorMitigationRegistry:
         for technique_instance in discovered.values():
             technique_name = technique_instance.name
             self._techniques[technique_name] = technique_instance
-            print(f"Discovered error mitigation technique: {technique_name}")
+            log.info(f"Discovered error mitigation technique: {technique_name}")
 
     def register_technique(self, technique: ErrorMitigationTechnique) -> None:
         """Manually register an error mitigation technique instance."""
         technique_name = technique.name
         self._techniques[technique_name] = technique
-        print(f"Manually registered error mitigation technique: {technique_name}")
+        log.info(f"Manually registered error mitigation technique: {technique_name}")
 
     def get_technique(self, name: str) -> ErrorMitigationTechnique:
         """Retrieve an error mitigation technique by name."""

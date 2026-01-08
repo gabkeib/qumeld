@@ -13,11 +13,13 @@ import os
 from pathlib import Path
 import re
 import numpy as np
+import logging
 
 from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from quantum_compiler.utils.paths import get_project_root
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
+log = logging.getLogger(__name__)
 
 class Doustra(QubitMapper):
     @property
@@ -103,7 +105,7 @@ class Doustra(QubitMapper):
         )
 
         if circuit.parameters:
-            print(
+            log.info(
                 f"Circuit has {len(circuit.parameters)} unbound parameters. Binding with random values..."
             )
             # Bind parameters with random values (or zeros)
@@ -137,16 +139,16 @@ class Doustra(QubitMapper):
             result = subprocess.run(
                 command, capture_output=True, text=True, check=True, cwd=os.getcwd()
             )
-            print(f"qsyn stdout: {result.stdout}")
+            log.info(f"qsyn stdout: {result.stdout}")
             swap_match = re.search(r"#SWAP:\s*(\d+)", result.stdout)
             if swap_match:
                 swap_value = int(swap_match.group(1))
             if result.stderr:
-                print(f"qsyn stderr: {result.stderr}")
+                log.error(f"qsyn stderr: {result.stderr}")
         except subprocess.CalledProcessError as e:
-            print(f"qsyn failed with return code {e.returncode}")
-            print(f"stdout: {e.stdout}")
-            print(f"stderr: {e.stderr}")
+            log.error(f"qsyn failed with return code {e.returncode}")
+            log.error(f"stdout: {e.stdout}")
+            log.error(f"stderr: {e.stderr}")
             raise
 
         optimised_qc = QuantumCircuit.from_qasm_str(open(out_path, "r").read())

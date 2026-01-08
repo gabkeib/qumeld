@@ -22,6 +22,9 @@ from qiskit_ibm_transpiler.ai.synthesis import AILinearFunctionSynthesis
 from qiskit_ibm_transpiler.ai.collection import CollectLinearFunctions
 from qiskit_ibm_transpiler.ai.synthesis import AIPauliNetworkSynthesis
 from qiskit_ibm_transpiler.ai.collection import CollectPauliNetworks
+import logging
+
+log = logging.getLogger(__name__)
 
 class CustomBackend(BackendV2):
     """Reconstructed CustomBackend in the worker environment"""
@@ -97,16 +100,16 @@ class CustomBackend(BackendV2):
 
 def reconstruct_backend(backend_config: dict) -> CustomBackend:
     """Reconstruct CustomBackend from serialized configuration"""
-    print(f"Reconstructing CustomBackend: '{backend_config['name']}'")
-    print(f"  Qubits: {backend_config['num_qubits']}")
-    print(f"  Edges: {len(backend_config['graph_list'])}")
+    log.info(f"Reconstructing CustomBackend: '{backend_config['name']}'")
+    log.info(f"  Qubits: {backend_config['num_qubits']}")
+    log.info(f"  Edges: {len(backend_config['graph_list'])}")
     
     backend = CustomBackend(
         name=backend_config['name'],
         graph_list=backend_config['graph_list']
     )
     
-    print(f"Backend reconstructed successfully with {backend.num_qubits} qubits")
+    log.info(f"Backend reconstructed successfully with {backend.num_qubits} qubits")
     return backend
 
 def qiskit_ai_optimise_circuit(circuit: QuantumCircuit, backend: CustomBackend) -> QuantumCircuit:
@@ -142,8 +145,6 @@ def qiskit_ai_optimise_circuit(circuit: QuantumCircuit, backend: CustomBackend) 
 def run_qiskit_ai_circuit(circuit, backend, algorithm_name):
     time_start = time()
 
-    # print("NOT HERE")
-
     backend = reconstruct_backend(backend)
 
     compiled_circuit = qiskit_ai_optimise_circuit(circuit, backend)
@@ -166,7 +167,7 @@ if __name__ == "__main__":
     try:
         result_path = sys.argv[1] if len(sys.argv) > 1 else None
         
-        print("Worker started, reading input...")
+        log.info("Worker started, reading input...")
         sys.stdout.flush()  # Flush output immediately
         
         input_data = pickle.load(sys.stdin.buffer)
@@ -175,7 +176,7 @@ if __name__ == "__main__":
         args = input_data['args']
         kwargs = input_data['kwargs']
         
-        print(f"Calling function: {function_name}")
+        log.info(f"Calling function: {function_name}")
         sys.stdout.flush()
         
         if function_name == 'run_qiskit_ai_circuit':
@@ -183,14 +184,14 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"Unknown function: {function_name}")
         
-        print("Function completed, writing result...")
+        log.info("Function completed, writing result...")
         sys.stdout.flush()
         
         # Write result to file
         if result_path:
             with open(result_path, 'wb') as f:
                 pickle.dump(result, f)
-            print(f"Result written successfully to {result_path}")
+            log.info(f"Result written successfully to {result_path}")
             sys.stdout.flush()
         else:
             # Fallback to stdout
@@ -203,10 +204,10 @@ if __name__ == "__main__":
             'error': str(e),
             'traceback': traceback.format_exc()
         }
-        print(f"\n{'='*60}")
-        print("ERROR in worker:")
-        print(error_info['traceback'])
-        print(f"{'='*60}\n")
+        log.error(f"\n{'='*60}")
+        log.error("ERROR in worker:")
+        log.error(error_info['traceback'])
+        log.error(f"{'='*60}\n")
         sys.stdout.flush()
         
         if result_path:
@@ -214,7 +215,7 @@ if __name__ == "__main__":
                 with open(result_path, 'wb') as f:
                     pickle.dump(error_info, f)
             except Exception as write_error:
-                print(f"Failed to write error to file: {write_error}")
+                log.error(f"Failed to write error to file: {write_error}")
         else:
             pickle.dump(error_info, sys.stdout.buffer)
             sys.stdout.buffer.flush()

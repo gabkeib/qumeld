@@ -9,9 +9,11 @@ from quantum_compiler.core.mapper_registry import MapperRegistry
 from quantum_compiler.mappers.base_mapper import QubitMapper
 from quantum_compiler.core.types import CircuitOptimisationResult
 from qiskit import qasm2
+import logging
 
 from qiskit.providers import BackendV2
 
+log = logging.getLogger(__name__)
 
 @dataclass
 class ExperimentConfig:
@@ -59,7 +61,7 @@ class ExperimentRunner:
                     "either circuits or Pauli strings"
                 )
         except Exception as e:
-            print(f"Experiment failed with error: {e}")
+            log.error(f"Experiment failed with error: {e}")
             result = CircuitOptimisationResult.create_failed(
                 reason=str(e), original_circuit=None
             )
@@ -74,7 +76,7 @@ class ExperimentRunner:
         """Run experiment with circuit input."""
         circuit = self.algorithm_registry.get_circuit(**config.algorithm_params)
         if circuit.num_qubits > backend.num_qubits:
-            print(
+            log.warning(
                 f"SKIPPING: circuit requires {circuit.num_qubits} qubits, "
                 f"but backend '{backend.name}' only has {backend.num_qubits} qubits."
             )
@@ -94,7 +96,7 @@ class ExperimentRunner:
             **config.algorithm_params
         )
         if len(pauli_strings[0].pauli_string) > backend.num_qubits:
-            print(
+            log.warning(
                 f"SKIPPING: Pauli strings require {len(pauli_strings[0].pauli_string)} qubits, "
                 f"but backend '{backend.name}' only has {backend.num_qubits} qubits."
             )
@@ -119,7 +121,7 @@ class ExperimentRunner:
             qasm_path = config.output_dir / f"{config.mapper_name}.qasm"
             circuit_to_save = result.optimised_circuit.decompose()
             if circuit_to_save.num_parameters > 0:
-                print(
+                log.warning(
                     f"Warning: Skipping QASM export for {config.mapper_name} "
                     f"- circuit has {circuit_to_save.num_parameters} unbound parameters"
                 )

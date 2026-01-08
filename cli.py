@@ -1,5 +1,6 @@
 import argparse
 import sys
+import logging
 from pathlib import Path
 from datetime import datetime
 from typing import List
@@ -32,6 +33,8 @@ Examples:
   python cli.py optimize --circuit circuit.qasm --topology rigetti_novera_q9 --optimizer sabre qiskit doustra
         """,
     )
+
+    parser.add_argument("-v", "--verbose", action="count", help="Enable verbose logging", default=0)
 
     backend_factory = BackendFactory()
     all_topologies = backend_factory.list_available()
@@ -167,7 +170,16 @@ def run_tests_cli():
 def main():
     args = parse_arguments()
 
-    print(args)
+    level = logging.WARNING
+    if args.verbose == 1:
+        level = logging.INFO
+    elif args.verbose >= 2:
+        level = logging.DEBUG
+
+    logging.basicConfig(
+        level=level,
+        format="%(levelname)s | %(name)s | %(message)s"
+    )
 
     if not args.command:
         print("Error: Please specify a command (optimize or experiment)")

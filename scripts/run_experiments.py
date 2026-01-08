@@ -31,8 +31,6 @@ def run_experiments(
         algorithm_registry=algorithm_registry,
     )
 
-    print(algorithm_registry.list_algorithms())
-
     project_root = get_project_root()
     if not output_dir:
         timestamp = int(datetime.now().timestamp())

@@ -7,7 +7,9 @@ from qiskit.providers import BackendV2
 from quantum_compiler.backends.custom_qiskit import ResearchBackend
 from quantum_compiler.topologies.base_topology import Topology
 from topologies.topologies import topology_functions
+import logging
 
+log = logging.getLogger(__name__)
 
 class BackendFactory:
     """
@@ -24,7 +26,7 @@ class BackendFactory:
             try:
                 # Assuming that dict functions return (coupling_map, num_qubits)
                 coupling_map, n_qubits = func()
-                print(f"Registering legacy backend: {name} with {n_qubits} qubits")
+                log.info(f"Registering legacy backend: {name} with {n_qubits} qubits")
 
                 # Creating a dynamic anonymous class to wrap this data
                 def _make_wrapper(
@@ -47,9 +49,9 @@ class BackendFactory:
                     return LegacyWrapper()
 
                 self._definitions[name] = _make_wrapper()
-                print(f"Registered legacy backend: {name}")
+                log.info(f"Registered legacy backend: {name}")
             except Exception as e:
-                print(f"Failed to register legacy backend {name}: {e}")
+                log.error(f"Failed to register legacy backend {name}: {e}")
 
     def get_backend(self, name: str) -> BackendV2:
         if name not in self._definitions:

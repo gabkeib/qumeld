@@ -93,7 +93,6 @@ def get_distance_matrix(graph, qubits):
     return dist_matrix
 
 def load_graph(code, dist_comp=True, len_func=lambda x:x):
-    print(code, topology_exists(code))
     if topology_exists(code):
         topology, qubits = get_topology_by_string(code)
         G = np.zeros((qubits, qubits))

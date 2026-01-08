@@ -2,10 +2,12 @@ from typing import List, Dict
 import importlib
 import inspect
 from pathlib import Path
+import logging
 
 from quantum_compiler.mappers.base_mapper import QubitMapper
 from quantum_compiler.utils.class_discovery import discover_subclasses
 
+log = logging.getLogger(__name__)
 
 class MapperRegistry:
     """A registry that automatically discovers and loads mapper implementations."""
@@ -34,12 +36,11 @@ class MapperRegistry:
             mapper_name = mapper_instance.name
 
             if mapper_name in self.disabled:
-                print(f"Skipping mapper: {mapper_name} (in disabled list)")
+                log.warning(f"Skipping mapper: {mapper_name} (in disabled list)")
                 continue
 
             self._mappers[mapper_name] = mapper_instance
-            print(f"Discovered mapper: {mapper_name}")
-
+            log.info(f"Discovered mapper: {mapper_name}")
     def get_mapper(self, name: str) -> QubitMapper:
         """Retrieve a mapper by name."""
         if name not in self._mappers:
@@ -53,7 +54,7 @@ class MapperRegistry:
         """Manually register a mapper instance."""
         mapper_name = mapper.name
         self._mappers[mapper_name] = mapper
-        print(f"Manually registered mapper: {mapper_name}")
+        log.info(f"Manually registered mapper: {mapper_name}")
 
     def list_available_mappers(self) -> List[str]:
         """List all registered mapper names."""

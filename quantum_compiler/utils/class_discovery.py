@@ -1,8 +1,10 @@
 import importlib
 import inspect
+import logging
 from pathlib import Path
 from typing import Type, List, Callable, Optional
 
+log = logging.getLogger(__name__)
 
 def discover_subclasses(
     base_class: Type,
@@ -60,7 +62,7 @@ def _scan_module_recursive(
                 else:
                     discovered[name] = obj
             except Exception as e:
-                print(f"Warning: Could not process {name}: {e}")
+                log.warning(f"Could not process {name}: {e}")
 
     # Scan submodules if this is a package
     if hasattr(module, "__path__"):

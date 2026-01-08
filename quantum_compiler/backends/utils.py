@@ -11,9 +11,6 @@ def extract_topology_features(backend: BackendV2) -> dict:
     """Extract topology features from a Qiskit BackendV2 object."""
     graph_list = backend.coupling_map.get_edges()
     num_qubits = backend.num_qubits
-
-    if backend.name == "ionq_harmony_q9":
-        print(graph_list)
     
     G = nx.Graph()
     G.add_nodes_from(range(num_qubits))

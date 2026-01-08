@@ -1,10 +1,12 @@
-from math import exp
+import logging
+from math import exp, log
 from qiskit.quantum_info import Statevector, state_fidelity, SparsePauliOp
 from qiskit import QuantumCircuit
 from sympy import Ci
 
 from stats_utils.types import CircuitOptimisationStatistics
 
+log = logging.getLogger(__name__)
 
 def pad_hamiltonian_to_size(
     hamiltonian: SparsePauliOp, target_num_qubits: int
@@ -39,7 +41,7 @@ def calculate_estimated_average_value_and_dispersion(
     hamiltonian: SparsePauliOp = None,
 ) -> CircuitOptimisationStatistics:
     if qc_before.num_clbits > 0 or qc_after.num_clbits > 0:
-        print(
+        log.warning(
             "Warning: Circuits with classical bits are not supported for estimated value calculation."
         )
         return CircuitOptimisationStatistics(
@@ -52,7 +54,7 @@ def calculate_estimated_average_value_and_dispersion(
 
     max_qubits = max(qc_before.num_qubits, qc_after.num_qubits)
     if max_qubits > 9:
-        print(
+        log.warning(
             "Warning: Circuits with more than 9 qubits are not supported for estimated value calculation."
         )
         return CircuitOptimisationStatistics(
