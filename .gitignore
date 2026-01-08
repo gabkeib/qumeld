@@ -25,3 +25,5 @@ results/
 optimisation_results/
 
 .env
+
+.vscode/settings.json
