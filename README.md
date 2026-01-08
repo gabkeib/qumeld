@@ -55,13 +55,13 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
 You can use the command-line interface (CLI) to optimize quantum circuits for specific backends. Here is a basic example of how to use it:
 
 ```bash
-uv run python3 cli.py optimize -c examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto
+uv run python3 cli.py optimize -c ./examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto
 ```
 
 To have a verbose output, add the `-v` flag:
 
 ```bash
-uv run python3 cli.py optimize -c examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto -v
+uv run python3 cli.py optimize -c ./examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto -v
 ```
 
 If algorithm is added to the AlgorithmProvider, you can run experiments with it:

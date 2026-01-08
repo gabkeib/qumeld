@@ -67,10 +67,10 @@ Examples:
         nargs="+",
         choices=all_optimisers + ["auto"],
         default=["lightSABRE"],
-        help="Circuit optimization algorithm(s)",
+        help="Qubit mapping algorithm(s)",
     )
     optimize_parser.add_argument(
-        "--output", "-out", help="Output directory (default: ./results/timestamp)"
+        "--output", "-out", help="Output directory where to save file"
     )
 
     # Experiment command
@@ -120,6 +120,8 @@ def optimize_circuit(
         print(f"Error: Circuit file {circuit_path} not found")
         return False
 
+    circuit_filename = circuit_file.stem
+
     # Load circuit
     try:
         with open(circuit_file, "r") as f:
@@ -140,11 +142,12 @@ def optimize_circuit(
         quantum_computer=topology,
         mappers_to_use=optimizers,
         output_dir=output_dir,
+        file_name=circuit_filename,
     )
 
     # Print summary
-    if results:
-        print(f"Optimization Summary (of {len(results)} results):")
+    if results and len(results) > 0:
+        print(f"Optimization Summary (of {len(results)} results) (for \"auto\" will return the same algorithm):")
         print("-" * 50)
         for result in results:
             print(

@@ -1,5 +1,6 @@
+from pathlib import Path
 from dotenv import load_dotenv
-from qiskit import QuantumCircuit, generate_preset_pass_manager
+from qiskit import QuantumCircuit, generate_preset_pass_manager, qasm2
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 import os
 from quantum_compiler.core.mapper_registry import MapperRegistry
@@ -31,6 +32,8 @@ def create_basic_circuit() -> QuantumCircuit:
 # Make sure that the credentials for qiskit runtime service are set up
 def run_real_backend_example():
     circuit = create_basic_circuit()
+
+    qasm2.dump(circuit, open(Path("./examples/circuits/basic_5_qubit_circuit.qasm"), "w"))
 
     service = QiskitRuntimeService(
         token=os.getenv("QISKIT_API_KEY"), plans_preference=["open"]
