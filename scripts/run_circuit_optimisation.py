@@ -1,3 +1,5 @@
+import logging
+from math import log
 from typing import List
 from qiskit import QuantumCircuit, qasm2
 from pathlib import Path
@@ -7,12 +9,14 @@ from quantum_compiler.core.mapper_selector import MapperSelector
 from quantum_compiler.core.types import CircuitOptimisationResult
 from quantum_compiler.mappers.base_mapper import QubitMapper
 
+log = logging.getLogger(__name__)
 
 def run_circuit_optimisation(
     circuit: QuantumCircuit,
     quantum_computer: str,
     mappers_to_use: List[str],
     output_dir: Path = None,
+    file_name: str = "custom_circuit",
 ) -> List[CircuitOptimisationResult]:
     """Run optimisation on a custom circuit."""
 
@@ -30,9 +34,10 @@ def run_circuit_optimisation(
         best_circuit_res, _, _ = mappers_selector.find_optimal_mapping(circuit, backend)
 
         if output_dir is not None:
-            qasm_path = output_dir / f"optimised_circuit_{mappers_to_use}.qasm"
+            qasm_path = output_dir / f"{file_name}_{best_circuit_res.mapper}.qasm"
             with open(qasm_path, "w") as f:
                 qasm2.dump(best_circuit_res.optimised_circuit, f)
+            print("Circuit is saved to:", str(qasm_path.resolve()))
         return [best_circuit_res]
     elif mappers_to_use[0] == "auto" and len(mappers_to_use) > 1:
         raise ValueError(
@@ -48,8 +53,9 @@ def run_circuit_optimisation(
         results.append(result)
 
         if output_dir is not None:
-            qasm_path = output_dir / f"optimised_circuit_{mapper_name}.qasm"
+            qasm_path = output_dir / f"{file_name}_{mapper_name}.qasm"
             with open(qasm_path, "w") as f:
                 qasm2.dump(result.optimised_circuit, f)
+            print("Circuit is saved to:", str(qasm_path.resolve()))
 
     return results

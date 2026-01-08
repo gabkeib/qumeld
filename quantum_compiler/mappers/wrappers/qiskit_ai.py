@@ -74,7 +74,6 @@ def call_qiskit_ai_function(function_name: str, *args, **kwargs):
         stderr=subprocess.STDOUT,  # Merge stderr into stdout
         env=env,
         cwd=str(project_root),
-        bufsize=1,  # Line buffered
         universal_newlines=False,
     )
 
