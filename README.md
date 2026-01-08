@@ -1,6 +1,6 @@
-# Research of Quantum Computer Topologies for Optimization Algorithms
+# QuMeld
 
-This repository contains code and experiments related to the research of quantum computer topologies for optimization algorithms
+QuMeld is a qubit mapping and circuit optimization framework focused on optimizing quantum circuits for various quantum hardware backends. It provides a modular infrastructure to easily integrate different qubit mapping algorithms and topologies, allowing users to experiment with and evaluate the performance of various approaches in the context of optimization problems like QAOA and VQE.
 
 ## Main features
 
@@ -49,6 +49,34 @@ This repository contains code and experiments related to the research of quantum
     ```
 
 ## Usage example
+
+### CLI
+
+You can use the command-line interface (CLI) to optimize quantum circuits for specific backends. Here is a basic example of how to use it:
+
+```bash
+uv run python3 cli.py optimize -c examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto
+```
+
+To have a verbose output, add the `-v` flag:
+
+```bash
+uv run python3 cli.py optimize -c examples/circuits/basic_5_qubit.qasm -t rigetti_novera_q9 -o auto -v
+```
+
+If algorithm is added to the AlgorithmProvider, you can run experiments with it:
+
+```bash
+uv run python3 cli.py experiment -a h2 -t rigetti_novera_q9 -o pauliforest
+```
+
+To run experiments with all available algorithms on all available topologies and qubit mappers, use:
+
+```bash
+uv run python3 cli.py experiment
+```
+
+### Python Script
 
 Basic example of using it in a Python script:
 ```python3
@@ -104,3 +132,8 @@ Python environment.
 uv venv .venv-qiskit-ai --python 3.13
 uv pip install qiskit-ibm-ai-local-transpiler qiskit_aer sympy qiskit_ibm_transpiler -p .venv-qiskit-ai
 ```
+
+### Attribution
+
+This framework is a part of the research work for the Master's thesis:
+"Research of Quantum Computer Topologies for Optimization Algorithms"

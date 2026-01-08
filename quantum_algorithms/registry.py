@@ -1,9 +1,11 @@
 from typing import Dict, List
-
 from qiskit import QuantumCircuit
 from quantum_algorithms.base_provider import AlgorithmProvider
 from quantum_compiler.core.types import PauliString
 from quantum_compiler.utils.class_discovery import discover_subclasses 
+import logging
+
+log = logging.getLogger(__name__)
 
 class AlgorithmRegistry:
     """
@@ -22,6 +24,7 @@ class AlgorithmRegistry:
     def register(self, name: str, provider: AlgorithmProvider):
         """Manually register a provider under a specific name."""
         self._providers[name] = provider
+        log.info(f"Registered algorithm provider: {name}")
 
     def _discover_default_algorithms(self):
         """Auto-discover known providers and files."""
@@ -31,7 +34,6 @@ class AlgorithmRegistry:
         )
 
         for algorithm_provider in discovered.values():
-            print(algorithm_provider)
             provider_name = algorithm_provider.name
 
             self.register(provider_name, algorithm_provider)
