@@ -1,6 +1,19 @@
+from enum import Enum
 from qiskit import transpiler
 from qiskit.providers import BackendV2
 import networkx as nx
+
+class TopologyGroup(Enum):
+    FULLY_CONNECTED = "fully_connected"
+    HEAVY_HEX = "heavy_hex"
+    SQUARE_2D_LATTICE = "square_2d_lattice"
+
+def topology_group(average_degree: float, edge_density: float) -> TopologyGroup:
+    if edge_density == 1.0:
+        return TopologyGroup.FULLY_CONNECTED
+    if average_degree >= 2.0 and average_degree <= 2.4:
+        return TopologyGroup.HEAVY_HEX
+    return TopologyGroup.SQUARE_2D_LATTICE
 
 
 def convert_array_to_coupling_map(arr):

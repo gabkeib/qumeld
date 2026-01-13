@@ -10,10 +10,10 @@ from quantum_compiler.core.types import CircuitOptimisationResult, PauliString
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
 
-class LightSABRE(QubitMapper):
+class LightSABREDecay(QubitMapper):
     @property
     def name(self) -> str:
-        return "lightSABRE"
+        return "lightSABRE_decay"
 
     @property
     def supports_circuit_mapping(self) -> bool:
@@ -31,8 +31,10 @@ class LightSABRE(QubitMapper):
     ) -> CircuitOptimisationResult:
         time_start = time()
 
+        seed = 54  # random seed for reproducibility
+
         pm: PassManager = generate_preset_pass_manager(
-            optimization_level=3, backend=backend
+            optimization_level=3, backend=backend, seed_transpiler=seed
         )
         compiled_circuit = pm.run(circuit)
 

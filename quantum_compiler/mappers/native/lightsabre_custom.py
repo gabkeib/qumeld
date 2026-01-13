@@ -11,10 +11,10 @@ from qiskit.transpiler.passes import SabreLayout, SabreSwap
 from stats_utils.estimated_value import calculate_estimated_average_value_and_dispersion
 
 
-class SABRE(QubitMapper):
+class LightSABRELookahead(QubitMapper):
     @property
     def name(self) -> str:
-        return "SABRE"
+        return "lightSABRE_lookahead"
 
     @property
     def supports_circuit_mapping(self) -> bool:
@@ -37,7 +37,7 @@ class SABRE(QubitMapper):
 
         sr_default = SabreSwap(
             coupling_map=backend.coupling_map,
-            heuristic="decay",
+            heuristic="lookahead",
             trials=swap_trials,
             seed=seed,
         )
@@ -49,11 +49,19 @@ class SABRE(QubitMapper):
             swap_trials=200,
         )
 
-        pm_layout = PassManager(sl)
-        qc_optimised = pm_layout.run(circuit)
+        pm_default: PassManager = generate_preset_pass_manager(
+            optimization_level=3, backend=backend, seed_transpiler=seed
+        )
+        pm_default.layout.replace(index=2, passes=sl)
+        pm_default.routing.replace(index=1, passes=sr_default)
 
-        pw_swap = PassManager(sr_default)
-        compiled_circuit = pw_swap.run(qc_optimised)
+        compiled_circuit = pm_default.run(circuit)
+
+        # pm_layout = PassManager(sl)
+        # qc_optimised = pm_layout.run(circuit)
+
+        # pw_swap = PassManager(sr_default)
+        # compiled_circuit = pw_swap.run(qc_optimised)
 
         calculated_statistics = calculate_estimated_average_value_and_dispersion(
             circuit, compiled_circuit, None
