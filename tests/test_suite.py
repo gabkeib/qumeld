@@ -4,6 +4,7 @@ from qiskit import QuantumCircuit
 from quantum_compiler.converters.pauli_strings_to_circuit import (
     convert_pauli_strings_to_circuit,
 )
+from quantum_compiler.core.types import PauliString
 from quantum_compiler.mappers.base_mapper import QubitMapper
 from qiskit.providers import BackendV2
 
@@ -168,7 +169,7 @@ class CorrectnessTestSuite:
         self,
         algorithm: QubitMapper,
         circuits: list[QuantumCircuit],
-        pauli_strings_set: list[list[str]] = [],
+        pauli_strings_set: list[list[PauliString]] = [],
         method: str = "auto",
         verbose: bool = True,
     ) -> list[dict]:

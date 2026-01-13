@@ -48,7 +48,7 @@ class AnsatzProvider(AlgorithmProvider):
                     param_values = np.random.uniform(0, 2 * np.pi, qc.num_parameters)
                 qc = qc.assign_parameters(param_values)
             
-            return qc
+            return qc.decompose().decompose()
         
         elif algorithm == "efficient_su2":
             ansatz = EfficientSU2(num_qubits=num_qubits, reps=reps, entanglement="linear")
@@ -61,7 +61,7 @@ class AnsatzProvider(AlgorithmProvider):
                     param_values = np.random.uniform(0, 2 * np.pi, qc.num_parameters)
                 qc = qc.assign_parameters(param_values)
             
-            return qc
+            return qc.decompose()
         else:
             raise ValueError(f"Unsupported ansatz algorithm: {algorithm}")
         

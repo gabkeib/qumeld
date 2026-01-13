@@ -49,7 +49,9 @@ class AlgorithmRegistry:
         if not provider.supports_circuits:
             raise ValueError(f"Algorithm '{name}' does not support circuit generation.")
 
-        return provider.get_circuit(**kwargs)
+        circuit = provider.get_circuit(**kwargs)
+        circuit.name = name
+        return circuit
 
     def get_pauli_strings(self, **kwargs) -> List[PauliString]:
         """
@@ -63,6 +65,20 @@ class AlgorithmRegistry:
             )
 
         return provider.get_pauli_strings(**kwargs)
+
+    def algorithm_supports_circuits(self, name: str) -> bool:
+        """
+        Check if a given algorithm supports circuit generation.
+        """
+        provider = self._get_provider_or_error(name)
+        return provider.supports_circuits
+    
+    def algorithm_supports_pauli_strings(self, name: str) -> bool:
+        """
+        Check if a given algorithm supports Pauli string generation.
+        """
+        provider = self._get_provider_or_error(name)
+        return provider.supports_pauli_strings
 
     def list_algorithms(self) -> List[str]:
         """

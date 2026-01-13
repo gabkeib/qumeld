@@ -31,7 +31,7 @@ def run_circuit_optimisation(
 
     if mappers_to_use[0] == "auto" and len(mappers_to_use) == 1:
         mappers_selector = MapperSelector(mapper_registry)
-        best_circuit_res, _, _ = mappers_selector.find_optimal_mapping(circuit, backend)
+        best_circuit_res, _, _ = mappers_selector.find_optimal_mapping_circuit(circuit, backend)
 
         if output_dir is not None:
             qasm_path = output_dir / f"{file_name}_{best_circuit_res.mapper}.qasm"

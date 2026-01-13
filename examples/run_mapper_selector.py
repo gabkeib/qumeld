@@ -30,7 +30,7 @@ def run_mapper_selector():
     backend_factory = BackendFactory()
     backend = backend_factory.get_backend("rigetti_novera_q9")
 
-    circuit, mapper_name, score = mapper_selector.find_optimal_mapping(circuit, backend)
+    circuit, mapper_name, score = mapper_selector.find_optimal_mapping_circuit(circuit, backend)
 
     print(f"Best mapper: {mapper_name} with score: {score}")
     print("Mapped Circuit:")
