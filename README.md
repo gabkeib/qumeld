@@ -48,6 +48,45 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
     uv sync
     ```
 
+4. Build the C++ components (qsyn):
+    
+    For Linux users:
+    ```bash
+    # Install required libraries
+    sudo apt install libopenblas-dev liblapack-dev
+    
+    # Navigate to qsyn directory and build
+    cd external_quantum_compilers/qsyn
+    make -j8
+    cd ../..
+    ```
+    
+    For macOS users:
+    ```bash
+    # Install LLVM and OpenBLAS
+    brew install llvm openblas
+    
+    # Navigate to qsyn directory and build
+    cd external_quantum_compilers/qsyn
+    make -j8
+    cd ../..
+    ```
+    
+    **Note:** When deploying to a remote server (e.g., via rsync/tar), you must rebuild the C++ components on the target machine. Exclude the binary when transferring:
+    ```bash
+    # Example rsync excluding the binary
+    rsync -avz --exclude='build/' --exclude='__pycache__/' --exclude='external_quantum_compilers/qsyn/qsyn' \
+      /path/to/local/project/ user@remote:/path/to/remote/project/
+    ```
+    
+    Then SSH into the remote machine and rebuild:
+    ```bash
+    ssh user@remote
+    cd /path/to/remote/project/external_quantum_compilers/qsyn
+    make -j8
+    ```
+
+
 ## Usage example
 
 ### CLI
