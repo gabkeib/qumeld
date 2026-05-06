@@ -71,7 +71,7 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
     cd ../..
     ```
     
-    **Note:** When deploying to a remote server (e.g., via rsync/tar), you must rebuild the C++ components on the target machine. Exclude the binary when transferring:
+    **Note:** When deploying to a remote server (rsync/tar), you must rebuild the C++ components on the target machine. Exclude the binary when transferring:
     ```bash
     # Example rsync excluding the binary
     rsync -avz --exclude='build/' --exclude='__pycache__/' --exclude='external_quantum_compilers/qsyn/qsyn' \
