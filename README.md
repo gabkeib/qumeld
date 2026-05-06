@@ -11,12 +11,11 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
 
 ## Currently supported qubit mapping algorithms
 
-- lightSABRE (from Qiskit)
-- SABRE (from Qiskit)
-- QiskitAI
-- Doustra
-- Rustiq (from Qiskit)
-- PauliForest (for synthesizing Pauli strings)
+- Doustra [1]
+- PauliForest (for synthesizing Pauli strings) [2]
+- lightSABRE (from Qiskit) (lookahead and decay) [3]
+- Rustiq (from Qiskit) [4]
+- QiskitAI [5][6]
 
 ## Prepared backends
 
@@ -172,11 +171,26 @@ uv venv .venv-qiskit-ai --python 3.13
 uv pip install qiskit-ibm-ai-local-transpiler qiskit_aer sympy qiskit_ibm_transpiler -p .venv-qiskit-ai
 ```
 
-## Used algorithms citations
+## References
 
+[1] Cheng et al., "Robust Qubit Mapping Algorithm via Double-Source Optimal Routing on Large Quantum Circuits," *ACM Transactions on Quantum Computing*, vol. 5, no. 3, 2024. DOI: 10.1145/3680291
+
+[2] Li et al., "PauliForest: Connectivity-Aware Synthesis and Pauli-Oriented Qubit Mapping for Near Term Quantum Simulation," *IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems*, 2024. DOI: 10.1109/TCAD.2024.3509794
+
+[3] Zou et al., "LightSABRE: A Lightweight and Enhanced SABRE Algorithm," *arXiv preprint*, 2024. arXiv: 2409.08368
+
+[4] Goubault de Brugière & Martiel, "Faster and Shorter Synthesis of Hamiltonian Simulation Circuits," *arXiv preprint*, 2024. arXiv: 2404.03280
+
+[5] Dubal et al., "Pauli Network Circuit Synthesis with Reinforcement Learning," *arXiv preprint*, 2025. arXiv: 2503.14448
+
+[6] Kremer et al., "Practical and Efficient Quantum Circuit Synthesis and Transpiling with Reinforcement Learning," *arXiv preprint*, 2024. arXiv: 2405.13196
 
 
 ## Attribution
 
-This framework is a part of the research work for the Master's thesis:
+This framework is described in:
+
+Keibas, G., & Petkevičius, L. (2026). "QuMeld: A Modular Framework for Benchmarking Qubit Mapping Algorithms." *arXiv preprint* arXiv:2603.01578. https://arxiv.org/abs/2603.01578
+
+It is a part of the research work for the Master's thesis:
 "Research of Quantum Computer Topologies for Optimization Algorithms"
