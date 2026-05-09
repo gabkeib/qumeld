@@ -18,7 +18,13 @@ from topologies.topologies import topology_functions
 
 
 def parse_arguments():
+    shared_parser = argparse.ArgumentParser(add_help=False)
+    shared_parser.add_argument(
+        "-v", "--verbose", action="count", help="Enable verbose logging", default=0
+    )
+
     parser = argparse.ArgumentParser(
+        parents=[shared_parser],
         description="Quantum Circuit Optimization CLI",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
@@ -34,8 +40,6 @@ Examples:
         """,
     )
 
-    parser.add_argument("-v", "--verbose", action="count", help="Enable verbose logging", default=0)
-
     backend_factory = BackendFactory()
     all_topologies = backend_factory.list_available()
 
@@ -49,7 +53,7 @@ Examples:
 
     # Circuit optimization command
     optimize_parser = subparsers.add_parser(
-        "optimize", help="Optimize a single quantum circuit"
+        "optimize", help="Optimize a single quantum circuit", parents=[shared_parser]
     )
     optimize_parser.add_argument(
         "--circuit", "-c", required=True, help="Path to quantum circuit file (.qasm)"
@@ -74,7 +78,9 @@ Examples:
     )
 
     # Experiment command
-    exp_parser = subparsers.add_parser("experiment", help="Run full experiments")
+    exp_parser = subparsers.add_parser(
+        "experiment", help="Run full experiments", parents=[shared_parser]
+    )
     exp_parser.add_argument(
         "--topologies",
         "-t",
@@ -104,7 +110,9 @@ Examples:
         "--output", "-out", help="Output directory (default: ./results/timestamp)"
     )
 
-    test_parser = subparsers.add_parser("test", help="Run algorithm validation tests")
+    test_parser = subparsers.add_parser(
+        "test", help="Run algorithm validation tests", parents=[shared_parser]
+    )
 
     return parser.parse_args()
 
