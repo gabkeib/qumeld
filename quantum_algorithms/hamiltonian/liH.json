@@ -2,2523 +2,2523 @@
     "name": "LiH",
     "pauli_strings": [
         {
-            "coeff": 0,
+            "coeff": 0.083656,
             "pauli": "IIIIIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.759983,
             "pauli": "IIIIIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.134982,
             "pauli": "IIIIIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.110716,
             "pauli": "IIIIIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.094588,
             "pauli": "IIIIIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.07068,
             "pauli": "IIIIIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.156872,
             "pauli": "IIIIIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.660898,
             "pauli": "IIIIIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.031231,
             "pauli": "IIIIIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.752324,
             "pauli": "IIIIIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.112545,
             "pauli": "IIIIIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.002142,
             "pauli": "IIIIIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.284078,
             "pauli": "IIIIIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.120465,
             "pauli": "IIIIIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.059954,
             "pauli": "IIIIIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.017977,
             "pauli": "IIIIIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.167736,
             "pauli": "IIIIIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.142825,
             "pauli": "IIIIIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.185658,
             "pauli": "IIIIIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.1974,
             "pauli": "IIIIZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.183492,
             "pauli": "IIIIIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.079256,
             "pauli": "XIXYYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.0639,
             "pauli": "XIXXYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.137808,
             "pauli": "YIIIYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.182885,
             "pauli": "XZZIYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.065362,
             "pauli": "IIIIZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.162902,
             "pauli": "XIXYYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.161313,
             "pauli": "XIXXXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.138998,
             "pauli": "YIIIYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.04149,
             "pauli": "XZZIXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.184277,
             "pauli": "IIIZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.091893,
             "pauli": "ZIXXIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.014491,
             "pauli": "IZYYIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.756985,
             "pauli": "IIZZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.072879,
             "pauli": "IZIIIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.020816,
             "pauli": "ZZZIIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.197643,
             "pauli": "IIIIIIIIIIZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.189632,
             "pauli": "IIIIIIIIIYYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.144683,
             "pauli": "IIIIIIIIIXXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.030941,
             "pauli": "IIIIIIYIYIXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.081829,
             "pauli": "IIIIIIXZYIYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.18167,
             "pauli": "IIIIIIIIIYXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.108841,
             "pauli": "IIIIIIIIIXXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.084245,
             "pauli": "IIIIIIYIYIYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.168083,
             "pauli": "IIIIIIXZYIYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.106884,
             "pauli": "IIIIIIYIYYZY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.159599,
             "pauli": "IIIIIIYIYXIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.088811,
             "pauli": "IIIIIIXZYYIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.054274,
             "pauli": "IIIIIIYIYXZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.054067,
             "pauli": "IIIIIIXZYYZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.051928,
             "pauli": "IIIIIIXZYXIY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.464789,
             "pauli": "IIIIIIIIIZIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.093209,
             "pauli": "IIIIIIYIYXZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.174662,
             "pauli": "IIIIIIXZYYZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.059214,
             "pauli": "IIIIIIIIIZZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.17461,
             "pauli": "IIIIIIIIIZIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.131545,
             "pauli": "IIIIIIYIYZXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.091651,
             "pauli": "IIIIIIXZYZXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.134639,
             "pauli": "IIIIIIIIZZZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.048218,
             "pauli": "IIIIIIIIZZIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.195809,
             "pauli": "IIIIIIIIZZZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.056,
             "pauli": "IIIIIIIIZXXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.02278,
             "pauli": "IIIIIIIIZYXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.073846,
             "pauli": "IIIIIIYIXZYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.137141,
             "pauli": "IIIIIIXZXZYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.4416,
             "pauli": "IIIIIIIZIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.108381,
             "pauli": "IIIIIIIZIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.74864,
             "pauli": "IIIIIIIZIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.073819,
             "pauli": "IIIIIIIZIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.092904,
             "pauli": "IIIIIIIZIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.115607,
             "pauli": "IIIIIIYZYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.177164,
             "pauli": "IIIIIIXIYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.150547,
             "pauli": "IIIIIIZZIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.074129,
             "pauli": "IIIIIIZZIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.062175,
             "pauli": "IIIIIIZZIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.041747,
             "pauli": "IIIIIIZZIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.165819,
             "pauli": "IIIIIIZZIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.065837,
             "pauli": "IIIIIZIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.094048,
             "pauli": "IIIIIZIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.405396,
             "pauli": "IIIIIZIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.024547,
             "pauli": "IIIIIZIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.094903,
             "pauli": "IIIIIZIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.033834,
             "pauli": "IIIIIZYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.159129,
             "pauli": "IIIIIZXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.04024,
             "pauli": "IIIIZXZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.449087,
             "pauli": "IIIIIXIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.199015,
             "pauli": "IIIIZXZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.003811,
             "pauli": "IIIIIXIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.163636,
             "pauli": "IIIIZXZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.724614,
             "pauli": "IIIIIXIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.15614,
             "pauli": "IIIIZXZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.050978,
             "pauli": "IIIIIXIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.116832,
             "pauli": "IIIIZXZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.031136,
             "pauli": "IIIIIXIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.174589,
             "pauli": "IIIIZXXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.047352,
             "pauli": "IIIIIXYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.198449,
             "pauli": "IIIIZXYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.011646,
             "pauli": "IIIIIXXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.188431,
             "pauli": "XIXYYXZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.144312,
             "pauli": "XIXXYYZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.195408,
             "pauli": "XIXYYXZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.088289,
             "pauli": "XIXXYYZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.072684,
             "pauli": "XIXYYXZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.014788,
             "pauli": "XIXXYYZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.09327,
             "pauli": "XIXYYXZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.056385,
             "pauli": "XIXXYYZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.155379,
             "pauli": "XIXYYXZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.026094,
             "pauli": "XIXXYYZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.018511,
             "pauli": "XIXYYXXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.181526,
             "pauli": "XIXXYYXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.150341,
             "pauli": "XIXYYXYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.094644,
             "pauli": "XIXXYYYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.000234,
             "pauli": "XIYIYXZIIIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.128539,
             "pauli": "XIXZYYZIIIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.165051,
             "pauli": "XIYIYXZIZZYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.148207,
             "pauli": "XIXZYYZIZZYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.080622,
             "pauli": "XYZIYXYYXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.05558,
             "pauli": "XXZIYYYYXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.043588,
             "pauli": "XYZIYXYXXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.138864,
             "pauli": "XXZIYYYXXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.105004,
             "pauli": "YIIIYXZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.015752,
             "pauli": "XZZIYYZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.111451,
             "pauli": "YIIIYXZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.012141,
             "pauli": "XZZIYYZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.199771,
             "pauli": "YIIIYXZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.070338,
             "pauli": "XZZIYYZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.192209,
             "pauli": "YIIIYXZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.171639,
             "pauli": "XZZIYYZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.151489,
             "pauli": "YIIIYXZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.132666,
             "pauli": "XZZIYYZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.076994,
             "pauli": "YIIIYXXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.17683,
             "pauli": "XZZIYYXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.151204,
             "pauli": "YIIIYXYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.17878,
             "pauli": "XZZIYYYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.165739,
             "pauli": "IIIIZZZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.005604,
             "pauli": "IIIIZZZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.172315,
             "pauli": "IIIIZZZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.104241,
             "pauli": "IIIIZZZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.106334,
             "pauli": "IIIIZZZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.148643,
             "pauli": "IIIIZZXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.009887,
             "pauli": "IIIIZZYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.019921,
             "pauli": "XIXYYZZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.093977,
             "pauli": "XIXXXIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.148973,
             "pauli": "XIXYYZZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.030745,
             "pauli": "XIXXXIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.115281,
             "pauli": "XIXYYZZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.015718,
             "pauli": "XIXXXIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.091972,
             "pauli": "XIXYYZZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.11954,
             "pauli": "XIXXXIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.075313,
             "pauli": "XIXYYZZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.19806,
             "pauli": "XIXXXIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.059951,
             "pauli": "XIXYYZXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.02476,
             "pauli": "XIXXXIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.00703,
             "pauli": "XIXYYZYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.151598,
             "pauli": "XIXXXIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.110121,
             "pauli": "XIYIYZZIIIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.064766,
             "pauli": "XIXZXIIIZIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.035323,
             "pauli": "XIYIYZZIZZYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.107954,
             "pauli": "XIXZXIIIIZYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.111913,
             "pauli": "XYZIYZYYXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.171603,
             "pauli": "XXZIXIXYYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.052441,
             "pauli": "XYZIYZYXXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.108423,
             "pauli": "XXZIXIXXYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.162168,
             "pauli": "YIIIYZZIZIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.143854,
             "pauli": "XZZIXIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.171657,
             "pauli": "YIIIYZZIZIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.104798,
             "pauli": "XZZIXIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.067591,
             "pauli": "YIIIYZZIZIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.114305,
             "pauli": "XZZIXIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.147075,
             "pauli": "YIIIYZZIZYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.174206,
             "pauli": "XZZIXIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.028417,
             "pauli": "YIIIYZZIZXYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.010932,
             "pauli": "XZZIXIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.113848,
             "pauli": "YIIIYZXIXIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.122999,
             "pauli": "XZZIXIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.123836,
             "pauli": "YIIIYZYZXIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.161228,
             "pauli": "XZZIXIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.110318,
             "pauli": "IIIZIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.030569,
             "pauli": "IIIZIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.052761,
             "pauli": "IIIZIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.09163,
             "pauli": "IIIZIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.069346,
             "pauli": "IIIZIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.193666,
             "pauli": "IIIZIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.160633,
             "pauli": "IIIZIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.038951,
             "pauli": "IIZXIIIIZIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.064279,
             "pauli": "IIIXIIIIZIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.144669,
             "pauli": "IIZXIIIIIZYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.100537,
             "pauli": "IIIXIIIIIZYY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.123916,
             "pauli": "IYYXIIXYYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.020555,
             "pauli": "IXYYIIXYYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.031247,
             "pauli": "IYYXIIXXYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.088582,
             "pauli": "IXYYIIXXYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.100077,
             "pauli": "ZIXXIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.169306,
             "pauli": "IZYYIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.022748,
             "pauli": "ZIXXIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.14454,
             "pauli": "IZYYIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.02013,
             "pauli": "ZIXXIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.179765,
             "pauli": "IZYYIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.199713,
             "pauli": "ZIXXIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.134411,
             "pauli": "IZYYIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.187599,
             "pauli": "ZIXXIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.170547,
             "pauli": "IZYYIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.139478,
             "pauli": "ZIXXIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.133476,
             "pauli": "IZYYIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.005744,
             "pauli": "ZIXXIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.114501,
             "pauli": "IZYYIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.039584,
             "pauli": "IIZZIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.176546,
             "pauli": "IIZZIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.048411,
             "pauli": "IIZZIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.194124,
             "pauli": "IIZZIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.093919,
             "pauli": "IIZZIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.113628,
             "pauli": "IIZZIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.017997,
             "pauli": "IIZZIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.030797,
             "pauli": "ZIXZIIIIZIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.182927,
             "pauli": "IZXIIIIIZIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.198169,
             "pauli": "ZIXZIIIIIZYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.022307,
             "pauli": "IZXIIIIIIZYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.349453,
             "pauli": "IZIIIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.138081,
             "pauli": "IZIIIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.325267,
             "pauli": "IZIIIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.187484,
             "pauli": "IZIIIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.031672,
             "pauli": "IZIIIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.016878,
             "pauli": "IZIIIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.09919,
             "pauli": "IZIIIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.177134,
             "pauli": "ZXZIIIXYYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.033671,
             "pauli": "IXIIIIXYYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.00114,
             "pauli": "ZXZIIIXXYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.141088,
             "pauli": "IXIIIIXXYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.137027,
             "pauli": "ZZZIIIIIIIIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.184312,
             "pauli": "ZZZIIIIIIIZX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.167955,
             "pauli": "ZZZIIIIIIIIX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.12567,
             "pauli": "ZZZIIIIIIYYX"
         },
         {
-            "coeff": 0,
+            "coeff": 0.038014,
             "pauli": "ZZZIIIIIIXYY"
         },
         {
-            "coeff": 0,
+            "coeff": 0.070085,
             "pauli": "ZZZIIIYIYIXX"
         },
         {
-            "coeff": 0,
+            "coeff": -0.105918,
             "pauli": "ZZZIIIXZYIXY"
         },
         {
-            "coeff": 0,
+            "coeff": -0.152045,
             "pauli": "IIIIIIIIIZZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.156115,
             "pauli": "IIIIIIYIYXIZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.101514,
             "pauli": "IIIIIIXZYYIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.037808,
             "pauli": "IIIIIIYIYZXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.047753,
             "pauli": "IIIIIIXZYZYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.03231,
             "pauli": "IIIIIIIIZZIZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.033469,
             "pauli": "IIIIIIIIZXXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.009113,
             "pauli": "IIIIIIIIZYYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.173883,
             "pauli": "IIIIIIYIXZYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.118296,
             "pauli": "IIIIIIXZXZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.086477,
             "pauli": "IIIIIIIZIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.104526,
             "pauli": "IIIIIIIZIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.041686,
             "pauli": "IIIIIIIZIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.068676,
             "pauli": "IIIIIIYZYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.080001,
             "pauli": "IIIIIIXIYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.073529,
             "pauli": "IIIIIIZZIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.100746,
             "pauli": "IIIIIIZZIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.170983,
             "pauli": "IIIIIIZZIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.016686,
             "pauli": "IIIIIZIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.199382,
             "pauli": "IIIIIZIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.198439,
             "pauli": "IIIIIZIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.170696,
             "pauli": "IIIIIZYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.114738,
             "pauli": "IIIIIZXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.09392,
             "pauli": "IIIIZXZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.173304,
             "pauli": "IIIIIXIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.152346,
             "pauli": "IIIIZXZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.151708,
             "pauli": "IIIIIXIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.052189,
             "pauli": "IIIIZXZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.136901,
             "pauli": "IIIIIXIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.133498,
             "pauli": "IIIIZXXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.081416,
             "pauli": "IIIIIXYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.044671,
             "pauli": "IIIIZXYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.194893,
             "pauli": "IIIIIXXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.061591,
             "pauli": "XIXYYXZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.196871,
             "pauli": "XIXXYYZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.126842,
             "pauli": "XIXYYXZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.080248,
             "pauli": "XIXXYYZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.065355,
             "pauli": "XIXYYXZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.175572,
             "pauli": "XIXXYYZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.146284,
             "pauli": "XIXYYXXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.153829,
             "pauli": "XIXXYYXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.157186,
             "pauli": "XIXYYXYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.021289,
             "pauli": "XIXXYYYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.091061,
             "pauli": "XIYIYXZIIIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.041932,
             "pauli": "XIXZYYZIIIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.087045,
             "pauli": "XIYIYXZIZZXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.118561,
             "pauli": "XIXZYYZIZZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.053695,
             "pauli": "XYZIYXYYXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.094406,
             "pauli": "XXZIYYYYXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.004587,
             "pauli": "XYZIYXYXXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.162135,
             "pauli": "XXZIYYYXXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.138441,
             "pauli": "YIIIYXZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.163081,
             "pauli": "XZZIYYZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.03057,
             "pauli": "YIIIYXZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.089328,
             "pauli": "XZZIYYZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.198582,
             "pauli": "YIIIYXZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.108448,
             "pauli": "XZZIYYZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.054845,
             "pauli": "YIIIYXXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.095218,
             "pauli": "XZZIYYXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.096492,
             "pauli": "YIIIYXYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.020672,
             "pauli": "XZZIYYYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.028925,
             "pauli": "IIIIZZZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.196132,
             "pauli": "IIIIZZZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.169902,
             "pauli": "IIIIZZZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.153243,
             "pauli": "IIIIZZXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.161571,
             "pauli": "IIIIZZYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.018236,
             "pauli": "XIXYYZZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.133838,
             "pauli": "XIXXXIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.033004,
             "pauli": "XIXYYZZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.140762,
             "pauli": "XIXXXIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.149022,
             "pauli": "XIXYYZZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.076697,
             "pauli": "XIXXXIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.159593,
             "pauli": "XIXYYZXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.118449,
             "pauli": "XIXXXIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.144281,
             "pauli": "XIXYYZYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.15957,
             "pauli": "XIXXXIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.115969,
             "pauli": "XIYIYZZIIIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.100188,
             "pauli": "XIXZXIIIZIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.158883,
             "pauli": "XIYIYZZIZZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.112046,
             "pauli": "XIXZXIIIIZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.153654,
             "pauli": "XYZIYZYYXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.037449,
             "pauli": "XXZIXIXYYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.048265,
             "pauli": "XYZIYZYXXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.138179,
             "pauli": "XXZIXIXXYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.171952,
             "pauli": "YIIIYZZIZIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.145842,
             "pauli": "XZZIXIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.190482,
             "pauli": "YIIIYZZIZYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.124309,
             "pauli": "XZZIXIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.152566,
             "pauli": "YIIIYZZIZXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.190085,
             "pauli": "XZZIXIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.094626,
             "pauli": "YIIIYZXIXIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.067126,
             "pauli": "XZZIXIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.172326,
             "pauli": "YIIIYZYZXIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.120894,
             "pauli": "XZZIXIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.145626,
             "pauli": "IIIZIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.1243,
             "pauli": "IIIZIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.093278,
             "pauli": "IIIZIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.11495,
             "pauli": "IIIZIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.156762,
             "pauli": "IIIZIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.148867,
             "pauli": "IIZXIIIIZIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.143437,
             "pauli": "IIIXIIIIZIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.111027,
             "pauli": "IIZXIIIIIZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.126635,
             "pauli": "IIIXIIIIIZXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.015879,
             "pauli": "IYYXIIXYYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.077924,
             "pauli": "IXYYIIXYYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.118138,
             "pauli": "IYYXIIXXYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.108962,
             "pauli": "IXYYIIXXYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.190534,
             "pauli": "ZIXXIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.122748,
             "pauli": "IZYYIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.068695,
             "pauli": "ZIXXIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.145741,
             "pauli": "IZYYIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.186756,
             "pauli": "ZIXXIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.08835,
             "pauli": "IZYYIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.056593,
             "pauli": "ZIXXIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.040129,
             "pauli": "IZYYIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.19246,
             "pauli": "ZIXXIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.014486,
             "pauli": "IZYYIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.175695,
             "pauli": "IIZZIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.153863,
             "pauli": "IIZZIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.18816,
             "pauli": "IIZZIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.128573,
             "pauli": "IIZZIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.185014,
             "pauli": "IIZZIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.093813,
             "pauli": "ZIXZIIIIZIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.156639,
             "pauli": "IZXIIIIIZIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.026174,
             "pauli": "ZIXZIIIIIZXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.091418,
             "pauli": "IZXIIIIIIZXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.074529,
             "pauli": "IZIIIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.042484,
             "pauli": "IZIIIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.004569,
             "pauli": "IZIIIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.045922,
             "pauli": "IZIIIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.030635,
             "pauli": "IZIIIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.098111,
             "pauli": "ZXZIIIXYYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.083514,
             "pauli": "IXIIIIXYYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.199323,
             "pauli": "ZXZIIIXXYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.17023,
             "pauli": "IXIIIIXXYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.015381,
             "pauli": "ZZZIIIIIIIZZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.087772,
             "pauli": "ZZZIIIIIIYYZ"
         },
         {
-            "coeff": 0,
+            "coeff": 0.09678,
             "pauli": "ZZZIIIIIIXXI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.068251,
             "pauli": "ZZZIIIYIYIXZ"
         },
         {
-            "coeff": 0,
+            "coeff": -0.054311,
             "pauli": "ZZZIIIXZYIYI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.688042,
             "pauli": "IIIIIIIIZIZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.065695,
             "pauli": "IIIIIIYIXYII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.06792,
             "pauli": "IIIIIIXZXXII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.297735,
             "pauli": "IIIIIIIZIZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.139206,
             "pauli": "IIIIIIYZYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.087902,
             "pauli": "IIIIIIXIYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.079871,
             "pauli": "IIIIIIZZIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.305145,
             "pauli": "IIIIIZIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.036643,
             "pauli": "IIIIIZYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.03904,
             "pauli": "IIIIIZXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.081738,
             "pauli": "IIIIZXZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.59634,
             "pauli": "IIIIIXIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.031821,
             "pauli": "IIIIZXXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.176145,
             "pauli": "IIIIIXYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.070927,
             "pauli": "IIIIZXYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.161122,
             "pauli": "IIIIIXXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.046206,
             "pauli": "XIXYYXZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.07962,
             "pauli": "XIXXYYZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.019175,
             "pauli": "XIXYYXXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.199838,
             "pauli": "XIXXYYXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.085235,
             "pauli": "XIXYYXYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.028045,
             "pauli": "XIXXYYYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.031994,
             "pauli": "XIYIYXZIIXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.061882,
             "pauli": "XIXZYYZIIXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.014005,
             "pauli": "XIYIYXZIZXII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.023136,
             "pauli": "XIXZYYZIZXII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.114519,
             "pauli": "XYZIYXYYXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.010726,
             "pauli": "XXZIYYYYXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.160472,
             "pauli": "XYZIYXYXXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.11841,
             "pauli": "XXZIYYYXXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.132123,
             "pauli": "YIIIYXZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.166082,
             "pauli": "XZZIYYZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.006181,
             "pauli": "YIIIYXXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.053176,
             "pauli": "XZZIYYXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.065925,
             "pauli": "YIIIYXYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.127369,
             "pauli": "XZZIYYYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.100455,
             "pauli": "IIIIZZZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.069118,
             "pauli": "IIIIZZXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.110144,
             "pauli": "IIIIZZYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.120348,
             "pauli": "XIXYYZZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.19023,
             "pauli": "XIXXXIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.102063,
             "pauli": "XIXYYZXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.009945,
             "pauli": "XIXXXIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.139895,
             "pauli": "XIXYYZYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.170869,
             "pauli": "XIXXXIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.034224,
             "pauli": "XIYIYZZIIXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.051906,
             "pauli": "XIXZXIIIZXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.122226,
             "pauli": "XIYIYZZIZXII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.078542,
             "pauli": "XIXZXIIIIXII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.002249,
             "pauli": "XYZIYZYYXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.102406,
             "pauli": "XXZIXIXYYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.062423,
             "pauli": "XYZIYZYXXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.197782,
             "pauli": "XXZIXIXXYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.100386,
             "pauli": "YIIIYZZIZZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.108018,
             "pauli": "XZZIXIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.157365,
             "pauli": "YIIIYZXIXXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.029942,
             "pauli": "XZZIXIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.129645,
             "pauli": "YIIIYZYZXYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.183186,
             "pauli": "XZZIXIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.028732,
             "pauli": "IIIZIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.179913,
             "pauli": "IIIZIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.100321,
             "pauli": "IIIZIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.139335,
             "pauli": "IIZXIIIIZXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.017415,
             "pauli": "IIIXIIIIZXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.120567,
             "pauli": "IIZXIIIIIXII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.268124,
             "pauli": "IIIXIIIIIXII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.195157,
             "pauli": "IYYXIIXYYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.038181,
             "pauli": "IXYYIIXYYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.180016,
             "pauli": "IYYXIIXXYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.15657,
             "pauli": "IXYYIIXXYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.045061,
             "pauli": "ZIXXIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.08771,
             "pauli": "IZYYIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.001911,
             "pauli": "ZIXXIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.132228,
             "pauli": "IZYYIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.019149,
             "pauli": "ZIXXIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.158883,
             "pauli": "IZYYIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.097462,
             "pauli": "IIZZIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.01013,
             "pauli": "IIZZIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.096323,
             "pauli": "IIZZIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.101104,
             "pauli": "ZIXZIIIIZXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.055065,
             "pauli": "IZXIIIIIZXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.106325,
             "pauli": "ZIXZIIIIIXII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.00852,
             "pauli": "IZXIIIIIIXII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.202797,
             "pauli": "IZIIIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.090161,
             "pauli": "IZIIIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.169007,
             "pauli": "IZIIIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.085709,
             "pauli": "ZXZIIIXYYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.091314,
             "pauli": "IXIIIIXYYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.072116,
             "pauli": "ZXZIIIXXYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.016061,
             "pauli": "IXIIIIXXYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.14465,
             "pauli": "ZZZIIIIIIZII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.107495,
             "pauli": "ZZZIIIYIYXZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.07758,
             "pauli": "ZZZIIIXZYYZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.082568,
             "pauli": "IIIIIIIZZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.174308,
             "pauli": "IIIIIIZZZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.03696,
             "pauli": "IIIIIZIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.017044,
             "pauli": "IIIIZXZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.03369,
             "pauli": "IIIIIXIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.117266,
             "pauli": "XIXYYXZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.031943,
             "pauli": "XIXXYYZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.161935,
             "pauli": "XIYIYXXIXZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.033632,
             "pauli": "XIXZYYXIXZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.078209,
             "pauli": "XIYIYXYZYIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.142693,
             "pauli": "XIXZYYYZYIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.106238,
             "pauli": "YIIIYXZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.047848,
             "pauli": "XZZIYYZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.197642,
             "pauli": "IIIIZZZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.059296,
             "pauli": "XIXYYZZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.10139,
             "pauli": "XIXXXIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.141379,
             "pauli": "XIYIYZXIXZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.181372,
             "pauli": "XIXZXIYIYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.032391,
             "pauli": "XIYIYZYZYIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.099006,
             "pauli": "XIXZXIXZXIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.018453,
             "pauli": "YIIIYZZIIZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.041301,
             "pauli": "XZZIXIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.111785,
             "pauli": "IIIZIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.112231,
             "pauli": "IIZXIIYIYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.025666,
             "pauli": "IIIXIIYIYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.18839,
             "pauli": "IIZXIIXZXIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.065548,
             "pauli": "IIIXIIXZXIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.071657,
             "pauli": "ZIXXIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.038273,
             "pauli": "IZYYIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.133982,
             "pauli": "IIZZIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.013044,
             "pauli": "IYYZIIXYYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.148949,
             "pauli": "IXXIIIXYYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.048903,
             "pauli": "IYYZIIXXXIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.189213,
             "pauli": "IXXIIIXXXIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.042392,
             "pauli": "ZIXZIIYIYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": 0.025757,
             "pauli": "IZXIIIYIYZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.189159,
             "pauli": "ZIXZIIXZXIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.0571,
             "pauli": "IZXIIIXZXIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.14572,
             "pauli": "IZIIIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.015321,
             "pauli": "ZZZIIIIIZZZI"
         },
         {
-            "coeff": 0,
+            "coeff": -0.269829,
             "pauli": "IIIIIIZIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.193434,
             "pauli": "IIIIIZIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.115336,
             "pauli": "IIIIZXZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.277047,
             "pauli": "IIIIIXIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.104492,
             "pauli": "XIXYYXZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.04835,
             "pauli": "XIXXYYZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.100804,
             "pauli": "XYZIYXIXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.13277,
             "pauli": "XXZIYYIXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.099091,
             "pauli": "XYZIYXZXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.167238,
             "pauli": "XXZIYYZXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.192247,
             "pauli": "YIIIYXZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.015768,
             "pauli": "XZZIYYZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.199963,
             "pauli": "IIIIZZZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.060016,
             "pauli": "XIXYYZZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.060058,
             "pauli": "XIXXXIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.112493,
             "pauli": "XYZIYZIXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.060702,
             "pauli": "XXZIXIZXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.101693,
             "pauli": "XYZIYZZXZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.179845,
             "pauli": "XXZIXIIXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.120256,
             "pauli": "YIIIYZZZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.191848,
             "pauli": "XZZIXIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.556188,
             "pauli": "IIIZIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.149512,
             "pauli": "IYYXIIZXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.067784,
             "pauli": "IXYYIIZXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.025588,
             "pauli": "IYYXIIIXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.112814,
             "pauli": "IXYYIIIXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.079786,
             "pauli": "ZIXXIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.106759,
             "pauli": "IZYYIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.132884,
             "pauli": "IIZZIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.171596,
             "pauli": "IZIIIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.09917,
             "pauli": "ZXZIIIZXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.154187,
             "pauli": "IXIIIIZXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.12772,
             "pauli": "ZXZIIIIXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.743553,
             "pauli": "IXIIIIIXIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.156761,
             "pauli": "ZZZIIIIZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.189729,
             "pauli": "IIIIIZZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.075217,
             "pauli": "IIIIZXIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.070939,
             "pauli": "IIIIIXZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.183269,
             "pauli": "XIXYYXIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.041338,
             "pauli": "XIXXYYIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.086006,
             "pauli": "YIIIYXIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.169601,
             "pauli": "XZZIYYIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.076246,
             "pauli": "IIIIZZIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.050897,
             "pauli": "XIXYYZIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.159239,
             "pauli": "XIXXXIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.108992,
             "pauli": "YIIIYZIZZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.140117,
             "pauli": "XZZIXIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.040165,
             "pauli": "IIIZIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.151578,
             "pauli": "ZIXXIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.193538,
             "pauli": "IZYYIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.113054,
             "pauli": "IIZZIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.061118,
             "pauli": "IZIIIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.028649,
             "pauli": "ZZZIIIZZIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.051772,
             "pauli": "IIIIZIZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.002384,
             "pauli": "XIXYYIZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.063508,
             "pauli": "XIXXXZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.13983,
             "pauli": "YIIIYIZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.128932,
             "pauli": "XZZIXZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.157784,
             "pauli": "XIXYXYIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.184315,
             "pauli": "XIXXXXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.054234,
             "pauli": "YIIIXYIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.131483,
             "pauli": "XZZIXXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.082923,
             "pauli": "ZIXYIYIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.025805,
             "pauli": "ZIXXZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.093518,
             "pauli": "IZYYZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.186189,
             "pauli": "ZIXXIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.091967,
             "pauli": "IZYYIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.12328,
             "pauli": "IZYXZYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.061077,
             "pauli": "IIIZIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.006601,
             "pauli": "ZIXXIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.02577,
             "pauli": "IZYYIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.09241,
             "pauli": "IIIZZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.370567,
             "pauli": "IIIZIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.140685,
             "pauli": "YIIZYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.132292,
             "pauli": "XZZZYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.165335,
             "pauli": "IIZZIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.152652,
             "pauli": "IIZZZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.102455,
             "pauli": "IIZZIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.014117,
             "pauli": "XIYXYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.044133,
             "pauli": "XIYYYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.048404,
             "pauli": "YIZZYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.18852,
             "pauli": "XZIZYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.561525,
             "pauli": "IZIIIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.127264,
             "pauli": "IZIIZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.460608,
             "pauli": "IZIIIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.119133,
             "pauli": "XZXYYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.063864,
             "pauli": "XZXXYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.152128,
             "pauli": "YZIIYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.080474,
             "pauli": "XIZIYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.089493,
             "pauli": "ZZZIIZIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.19594,
             "pauli": "ZZZIZXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.179225,
             "pauli": "ZZZIIXIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.165755,
             "pauli": "YZYYYXZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.08803,
             "pauli": "YZYXYYZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.004569,
             "pauli": "IIIZZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.103266,
             "pauli": "ZIXXZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.076244,
             "pauli": "IZYYZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.058361,
             "pauli": "YIIZYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.003671,
             "pauli": "XZZZXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.117173,
             "pauli": "IIZZZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.162779,
             "pauli": "XIYXYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.111361,
             "pauli": "XIYYXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.076715,
             "pauli": "YIZZYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.077518,
             "pauli": "XZIZXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.032622,
             "pauli": "IZIIZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.010696,
             "pauli": "XZXYYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.012369,
             "pauli": "XZXXXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.029798,
             "pauli": "YZIIYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.098374,
             "pauli": "XIZIXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.067683,
             "pauli": "ZZZIZZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.081142,
             "pauli": "YZYYYZZIZIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.091633,
             "pauli": "YZYXXIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.149158,
             "pauli": "IIZIIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.151738,
             "pauli": "ZIYYIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.122966,
             "pauli": "IZXXIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.608712,
             "pauli": "IZIZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.014346,
             "pauli": "ZZXXIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.419503,
             "pauli": "IIYYIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.12594,
             "pauli": "ZZZZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.113446,
             "pauli": "IZZZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": -0.006321,
             "pauli": "ZZIZIIIIIIII"
         },
         {
-            "coeff": 0,
+            "coeff": 0.359336,
             "pauli": "ZIZIIIIIIIII"
         }
     ]

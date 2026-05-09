@@ -87,7 +87,7 @@ class Doustra(QubitMapper):
         project_root = get_project_root()
 
         backend_name_normalized = backend.name.replace(" ", "_").lower()
-        quantum_algorithm_normalized = backend.name.replace(" ", "_").lower()
+        quantum_algorithm_normalized = quantum_algorithm.replace(" ", "_").lower()
 
         script_path = (
             project_root / "configs" / "doustra" / "scripts" / "optimise_circuit.qsyn"
