@@ -65,11 +65,31 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
     cd ../..
     ```
 
-    If `make` does not work, it is worth trying:
+    If `make` does not work, try the following mitigations:
+    
+    **Mitigation 1: Ensure C++20 standard is set**
     ```bash
     # Run this from inside external_quantum_compilers/qsyn
     cmake . -DCMAKE_CXX_STANDARD=20
     ```
+    
+    **Mitigation 2: Fix missing headers (GCC 14+ with C++20)**
+    
+    If you see a parse error about `std::uint8_t` being undefined, add the missing header:
+    - Edit `external_quantum_compilers/qsyn/src/duostra/duostra_def.hpp`
+    - Add `#include <cstdint>` near the top with other includes (around line 11)
+    
+    **Mitigation 3: Suppress GCC 14 strict warnings**
+    
+    If the build fails with a `cast-user-defined` warning treated as error:
+    - Edit `external_quantum_compilers/qsyn/CMakeLists.txt`
+    - Find the lines with `target_compile_options` for the main target and test target (around lines 250-258 and 324-334)
+    - Add this line after each of the `-Wall -Wextra -Werror` settings:
+      ```cmake
+      target_compile_options(
+          ${CMAKE_PROJECT_NAME} PRIVATE -Wno-error=cast-user-defined)
+      ```
+      (or `${UNIT_TEST_NAME}` for the test target)
     
     For macOS users:
     ```bash
