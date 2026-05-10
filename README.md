@@ -57,12 +57,18 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
     For Linux users:
     ```bash
     # Install required libraries
-    sudo apt install libopenblas-dev liblapack-dev
+    sudo apt install build-essential cmake libopenblas-dev liblapack-dev libreadline-dev python3-dev
     
     # Navigate to qsyn directory and build
     cd external_quantum_compilers/qsyn
     make -j8
     cd ../..
+    ```
+
+    If `make` does not work, it is worth trying:
+    ```bash
+    # Run this from inside external_quantum_compilers/qsyn
+    cmake . -DCMAKE_CXX_STANDARD=20
     ```
     
     For macOS users:

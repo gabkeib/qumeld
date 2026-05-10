@@ -104,6 +104,9 @@ class Doustra(QubitMapper):
             / f"{backend_name_normalized}.layout"
         )
 
+        in_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
         if circuit.parameters:
             log.info(
                 f"Circuit has {len(circuit.parameters)} unbound parameters. Binding with random values..."
@@ -116,11 +119,11 @@ class Doustra(QubitMapper):
             # parameter_values = {param: 0.0 for param in circuit.parameters}
 
             bound_circuit = circuit.assign_parameters(parameter_values)
-            qasm2.dump(
-                self.transpile_circuit(bound_circuit, backend), open(in_path, "w")
-            )
+            with open(in_path, "w") as file_handle:
+                qasm2.dump(self.transpile_circuit(bound_circuit, backend), file_handle)
         else:
-            qasm2.dump(self.transpile_circuit(circuit, backend), open(in_path, "w"))
+            with open(in_path, "w") as file_handle:
+                qasm2.dump(self.transpile_circuit(circuit, backend), file_handle)
 
         if not Path(layout_path).exists():
             edge_list_ll = [list(edge) for edge in backend.coupling_map.get_edges()]
@@ -151,7 +154,8 @@ class Doustra(QubitMapper):
             log.error(f"stderr: {e.stderr}")
             raise
 
-        optimised_qc = QuantumCircuit.from_qasm_str(open(out_path, "r").read())
+        with open(out_path, "r") as file_handle:
+            optimised_qc = QuantumCircuit.from_qasm_str(file_handle.read())
         return optimised_qc, swap_value
 
     def convert_to_layout(
