@@ -1,0 +1,3 @@
+[submodule "external_quantum_compilers/qsyn"]
+	path = external_quantum_compilers/qsyn
+	url = https://github.com/DVLab-NTU/qsyn.git

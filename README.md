@@ -33,8 +33,13 @@ QuMeld is a qubit mapping and circuit optimization framework focused on optimizi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gabkeib/qumeld.git
+    git clone --recurse-submodules https://github.com/gabkeib/qumeld.git
    ```
+
+    If you already cloned it without submodules, run:
+    ```bash
+    git submodule update --init --recursive
+    ```
 
 2. Download uv if you don't have it already:
    ```bash
